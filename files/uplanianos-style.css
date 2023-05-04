@@ -1,11 +1,9 @@
 
-body {	background-color: #000000;
-	font-family: Verdana, Helvetica, sans-serif;
-	background-image: url("../media/blueprint.jpg");
-	background-size: cover;
- 	background-repeat: no-repeat;
- 	background-attachment: fixed;
-	overflow: auto; }
+body {	font-family: Verdana, Helvetica, sans-serif;
+	background-color: black;
+}
+
+body::-webkit-scrollbar { display: none; }
 
 p    {color: white;}
 h1   {color: white;}
@@ -13,13 +11,24 @@ h2   {color: white;}
 h3   {color: white;}
 a { text-decoration: none; }
 
-.main-div {
-  margin: auto;
-  width: 450px;
-  border: 1px solid gray;
-  padding: 6px;
-  background-color: #151B54; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom, black, #151B54, #36013F);
+* { box-sizing: border-box; }
+
+.left {background-color: black; padding: 5px; float: left; width: 5%; }
+
+.main {
+	background-color: #151B54; /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom, black, #151B54, #36013F);
+	border: 1px solid gray;
+	float: left;
+	padding: 12px;
+	width: 90%; /* The width is 60%, by default */
+}
+
+.right {background-color: black; padding: 5px; float: left; width: 5%; }
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right { width: 100%; /* The width is 100%, when the viewport is 800px or smaller */ }
 }
 
 .title {
@@ -39,12 +48,35 @@ a { text-decoration: none; }
 }
 
 @-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #999, 0 0 20px #999, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
+  from { text-shadow: 0 0 10px #999, 0 0 20px #999, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; }
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; }
 }
+
+.labels {
+  margin: auto;
+  width: 92%;
+  padding: 3px;
+}
+
+.bubbles {
+  display: inline-block;
+  margin-left: 6px;
+  margin-right: 6px;
+  width: 180px;
+  padding: 3px;
+  background-color: #151B54;
+  border: 2px solid lightgray;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.info-div {
+  margin-left: 40px auto;
+  text-align: center;
+  padding: 6px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.info-div::-webkit-scrollbar { display: none; }
 
