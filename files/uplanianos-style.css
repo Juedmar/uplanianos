@@ -1,12 +1,8 @@
 
 body {	font-family: 'Roboto', Verdana, Helvetica, Sans-serif;
 	background-color: black;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
 	margin-left: 0px;
 	margin-right: 0px;
-	height: 100%;
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
@@ -24,6 +20,8 @@ a	{ text-decoration: none; }
 	margin: auto;
 	background-color: #151B54; /* For browsers that do not support gradients */
 	background-image: linear-gradient(to bottom, black, #151B54, #36013F);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	border: 1px solid navy;
 	float: center;
 	padding: 0px;
@@ -46,8 +44,8 @@ a	{ text-decoration: none; }
 
 .title {
   margin: auto;
-  width: 90%;
-  padding: 3px;
+  width: 95%;
+  padding: 12px;
   background-color: #151B54; /* For browsers that do not support gradients */
   border: 1px solid white;
   border-radius: 12px;
@@ -55,7 +53,7 @@ a	{ text-decoration: none; }
 
 .uplanianos-h1-glow {
   font-size: 32px;
-  color: #fff;
+  color: #FFFFFF;
   text-align: center;
   animation: glow 2s ease-in-out infinite alternate;
 }
@@ -74,9 +72,9 @@ a	{ text-decoration: none; }
 .info-bubble {
   display: inline-block;
   width: 160px;
-  margin-left: 3px;
-  margin-right: 3px;
-  padding: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
   background-color: #151B54;
   border: 1px solid white;
   border-radius: 12px;
@@ -86,17 +84,17 @@ a	{ text-decoration: none; }
 .info-bubble-off {
   display: inline-block;
   width: 150px;
-  margin-left: 3px;
-  margin-right: 3px;
-  padding: 3px;
-  background-color: #888;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
+  background-color: #666;
   border: 1px solid white;
   border-radius: 12px;
   text-align: center;
   cursor: not-allowed;
 }
 
-.font-bubble-off { color: lightgray; }
+.font-bubble-off { color: darkgray; }
 
 .tools-div { font-size: 14px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 6px; overflow-x: scroll; white-space: nowrap; }
 
@@ -107,13 +105,24 @@ a	{ text-decoration: none; }
   width: 140px;
   margin-left: 3px;
   margin-right: 3px;
-  padding: 1px;
+  padding: 4px;
   background-color: #151B54;
   border: 1px solid white;
   border-radius: 12px;
   text-align: center;
 }
 
+.tools-bubble-off {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #666;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+  cursor: not-allowed;
+}
+
 .footer { color: white; font-size: 12px; margin-left: 20px; margin-right: 20px; padding: 0px; padding-top: 12px; text-align: center; }
-
-
