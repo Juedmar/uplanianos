@@ -15,7 +15,7 @@ h1	{color: white;}
 a	{ color: cornflowerblue; text-decoration: none; }
 a:hover		{ color: blue; text-decoration: underline; }
 a:active	{ color: red; }
-a:visited	{ color: purple; }
+a:visited	{ color: hotpink; }
 
 * { box-sizing: border-box; }
 
