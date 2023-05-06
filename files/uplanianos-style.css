@@ -12,7 +12,10 @@ body::-webkit-scrollbar { display: none; }
 
 p	{color: white;}
 h1	{color: white;}
-a	{ text-decoration: none; }
+a	{ color: cornflowerblue; text-decoration: none; }
+a:hover		{ color: blue; text-decoration: underline; }
+a:active	{ color: red; }
+a:visited	{ color: purple; }
 
 * { box-sizing: border-box; }
 

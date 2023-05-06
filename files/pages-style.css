@@ -12,7 +12,10 @@ body::-webkit-scrollbar { display: none; }
 
 p	{color: white;}
 h1	{color: white;}
-a	{ text-decoration: none; }
+a	{ color: cornflowerblue; text-decoration: none; }
+a:hover		{ color: blue; text-decoration: underline; }
+a:active	{ color: red; }
+a:visited	{ color: purple; }
 
 * { box-sizing: border-box; }
 
@@ -103,4 +106,16 @@ a	{ text-decoration: none; }
 	padding: 6px;
 	text-align: left;
 	border-radius: 6px;
+}
+
+.grid-item-license {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #151B54;
+	border: 1px solid white;
+	color: white;
+	padding: 6px;
+	text-align: left;
+	border-radius: 12px;
 }
