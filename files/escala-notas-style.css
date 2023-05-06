@@ -21,6 +21,7 @@ a	{ text-decoration: none; }
 	background-color: #151B54; /* For browsers that do not support gradients */
 	background-image: linear-gradient(to bottom, black, #151B54, #36013F);
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: 100% 100%;
 	border: 1px solid navy;
 	float: center;
