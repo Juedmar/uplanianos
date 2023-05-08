@@ -12,7 +12,7 @@ body::-webkit-scrollbar { display: none; }
 
 p	{color: white;}
 h1	{color: white;}
-a	{ color: cornflowerblue; text-decoration: none; }
+a		{ color: cornflowerblue; text-decoration: none; }
 a:hover		{ color: blue; text-decoration: underline; }
 a:active	{ color: red; }
 a:visited	{ color: hotpink; }
@@ -50,7 +50,7 @@ a:visited	{ color: hotpink; }
 
 .labels { margin-left: 20px; margin-right: 20px; padding: 0px; padding-top: 12px; }
 
-.grid-container-calendar {
+.grid-container-pages {
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
@@ -116,6 +116,110 @@ a:visited	{ color: hotpink; }
 	border: 1px solid white;
 	color: white;
 	padding: 6px;
+	padding-left: 18px;
 	text-align: left;
 	border-radius: 12px;
 }
+
+.grid-item-tools {
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #151B54;
+	border: 1px solid white;
+	color: white;
+	padding: 6px;
+	padding-left: 18px;
+	text-align: left;
+	border-radius: 12px;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+    .grid-item-tools {
+	/* The width is 100%, when the viewport is 800px or smaller */ 
+	width: 80%;
+    }
+}
+
+.grid-item-transparent {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+	border: 0px solid white;
+	color: white;
+	padding: 6px;
+	padding-left: 18px;
+	text-align: left;
+}
+
+.test-number {
+	color: cornflowerblue;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.slidebar {
+	width: 88%;
+	margin-left: 18px;
+	outline: none;
+}
+
+.test-container { display: flex; width: 90%; text-align: center; align-content: center; }
+.test-child { flex: 1; padding: 6px; padding-left: 12px; padding-right: 12px; }
+
+input[type=number] {
+	font-size: 18px;
+	text-align: center;
+	padding: 6px 0px 6px 12px;
+	border: 3px solid cornflowerblue;
+	border-radius: 12px;
+	cursor: copy;
+}
+
+input[type=number].results {
+	width: 115px;
+	color: black;
+	background: white;
+	font-size: 18px;
+	text-align: center;
+	padding: 6px 0px 6px 12px;
+	border: 3px solid cornflowerblue;
+	border-radius: 12px;
+	cursor: not-allowed;
+	outline: none;
+}
+
+#getResults {
+	width: 125px;
+	background-color: darkred;
+	border: 3px solid darkgray;
+	border-radius: 4px 4px;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	cursor: pointer; }
+
+#getResults:hover { background-color: #C30028; color: white; }
+#getResults:active { background-color: #FC0034; color: black; }
+
+#clearGrades {
+	width: 100px;
+	background-color: darkgreen;
+	border: 3px solid darkgray;
+	border-radius: 4px 4px;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	cursor: pointer; }
+
+#clearGrades:hover { background-color: green; color: white; }
+#clearGrades:active { background-color: #39FF14; color: black; }
+
