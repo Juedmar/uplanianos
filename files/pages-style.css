@@ -196,6 +196,12 @@ input[type=number].results {
 	cursor: not-allowed;
 }
 
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+	input[type=number] { padding-left: 0px; }
+	input[type=number].results { padding-left: 0px; }
+}
+
 
 /* BUTTONS SETTINGS */
 
