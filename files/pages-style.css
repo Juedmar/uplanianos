@@ -115,6 +115,10 @@ a:visited	{ color: hotpink; }
 	border-radius: 6px;
 }
 
+
+
+/* LICENCE DIV SETTINGS */
+
 .grid-item-license {
 	width: 90%;
 	margin-left: auto;
@@ -170,12 +174,26 @@ a:visited	{ color: hotpink; }
 	border-radius: 12px;
 }
 
+.grid-exam-results {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #151B54;
+	border: 1px solid white;
+	color: white;
+	padding: 6px;
+	padding-left: 18px;
+	text-align: left;
+	border-radius: 12px;
+}
+
 
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
     .grid-item-slider {  width: 95%; }
     .grid-item-tools {  width: 90%; }
     .grid-item-results {  width: 75%; }
+    .grid-exam-results {  width: 75%; }
 }
 
 
@@ -323,5 +341,12 @@ input[type=number].calculation {
 	border-radius: 6px;
 	pointer-events: none;
 	outline: none;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+	input[type=number].average { padding-left: 3px; }
+	input[type=number].exam { padding-left: 3px; }
+	input[type=number].calculation { padding-left: 3px; }
 }
 
