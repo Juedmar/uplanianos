@@ -345,8 +345,8 @@ input[type=number].calculation {
 
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
-	input[type=number].average { padding-left: 0px; auto; padding-right: 6px;}
-	input[type=number].exam { padding-left: 0px; padding-right: 6px; }
-	input[type=number].calculation { padding-left: 0px; padding-right: 6px; }
+	input[type=number].average	{ padding-left: 0px; padding-right: 3px;}
+	input[type=number].exam		{ padding-left: 0px; padding-right: 3px; }
+	input[type=number].calculation	{ padding-left: 0px; padding-right: 3px; }
 }
 
