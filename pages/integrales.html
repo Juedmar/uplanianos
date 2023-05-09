@@ -15,7 +15,7 @@
     <div class="labels"><b><p>Uplanianos Web App:</b> Promediar Evaluaciones Integrales.</p></div>
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><b>Cantidad de Evaluaciones:</b> <text class="test-number" id="valueIntegrales">2</text><br><br>
-	  <input type="range" class="slidebar" min="2" max="12" value="2" id="rangeIntegrales" oninput="valueIntegrales.innerText = this.value" onchange="howManyTests()"><br><br></div>
+	  <input type="range" class="slidebar" min="2" max="12" value="2" id="rangeIntegrales" oninput="valueIntegrales.innerText = this.value; howManyTests()"><br><br></div>
 
 	  <div class="grid-item-tools"><br><b>Evaluaciones:</b><br>
 
@@ -295,18 +295,18 @@ function howManyTests() {
 
 <script>
 	function clearGrades() {
-	  var grade1 = document.getElementById("grade1").value = "0";
-	  var grade2 = document.getElementById("grade2").value = "0";
-	  var grade3 = document.getElementById("grade3").value = "0";
-	  var grade4 = document.getElementById("grade4").value = "0";
-	  var grade5 = document.getElementById("grade5").value = "0";
-	  var grade6 = document.getElementById("grade6").value = "0";
-	  var grade7 = document.getElementById("grade7").value = "0";
-	  var grade8 = document.getElementById("grade8").value = "0";
-	  var grade9 = document.getElementById("grade9").value = "0";
-	  var grade10 = document.getElementById("grade10").value = "0";
-	  var grade11 = document.getElementById("grade11").value = "0";
-	  var grade12 = document.getElementById("grade12").value = "0";
+	  var grade1 = document.getElementById("grade1").value = "";
+	  var grade2 = document.getElementById("grade2").value = "";
+	  var grade3 = document.getElementById("grade3").value = "";
+	  var grade4 = document.getElementById("grade4").value = "";
+	  var grade5 = document.getElementById("grade5").value = "";
+	  var grade6 = document.getElementById("grade6").value = "";
+	  var grade7 = document.getElementById("grade7").value = "";
+	  var grade8 = document.getElementById("grade8").value = "";
+	  var grade9 = document.getElementById("grade9").value = "";
+	  var grade10 = document.getElementById("grade10").value = "";
+	  var grade11 = document.getElementById("grade11").value = "";
+	  var grade12 = document.getElementById("grade12").value = "";
 	  var addition = document.getElementById("addition").value = "0";
 	  var calculation = document.getElementById("calculation").value = "0.00";
 	  var average = document.getElementById("average").value = "0.0";

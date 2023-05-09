@@ -16,7 +16,7 @@
 
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><text class="class-type" id="class-type"><b>Curso:</b> Teórico (</text> <text class="class-percent" id="class-percent">60%</text><text class="class-type"> ).</text><br><br>
-	  <input type="range" class="slidebar" min="1" max="3" value="1" id="classType" onchange="classType(); getResult()"><br><br></div>
+	  <input type="range" class="slidebar" min="1" max="3" value="1" id="classType" oninput="classType(); getResult()"><br><br></div>
 
 	  <div class="grid-item-tools"><br><b>Asistencia:</b>
 	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
@@ -24,7 +24,7 @@
 	    <div class="test-left" style="margin-top: 16px;">Clases realizadas:</div>
 	    <div class="test-right"><input type="number" class="attendance" id="classes" min="0" max="80" step="1" value="20" readonly disabled></div>
 	  </div>
-	  <input type="range" class="slidebar" id="classSlider" min="1" max="80" value="20" onchange="classUpdate(); getResult()"><br><br>
+	  <input type="range" class="slidebar" id="classSlider" min="1" max="80" value="20" oninput="classUpdate(); getResult()"><br><br>
 
 
 	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
@@ -34,7 +34,7 @@
 	    <div class="test-left" style="margin-top: 16px;">Mi asistencia:</div>
 	    <div class="test-right"><input type="number" class="attendance" id="attendance" min="0" max="80" step="1" value="0" readonly disabled></div>
 	  </div>
-	  <input type="range" class="slidebar" id="attendanceSlider" min="1" max="20" value="0" onchange="attendanceUpdate(); getResult()"><br><br>
+	  <input type="range" class="slidebar" id="attendanceSlider" min="1" max="20" value="0" oninput="attendanceUpdate(); getResult()"><br><br>
 	  <br>
 	  </div>
 
