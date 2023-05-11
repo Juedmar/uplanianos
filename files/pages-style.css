@@ -387,7 +387,7 @@ input[type=number].average-input {
 }
 
 input[type=number].average-maths {
-	width: 75px;
+	width: 85px;
 	color: black;
 	background: darkgray;
 	font-size: 15px;
@@ -403,6 +403,6 @@ input[type=number].average-maths {
 
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
-	input[type=number].average-input { padding-left: 0px; padding-right: 0px; }
-	input[type=number].average-maths { padding-left: 0px; padding-right: 0px; }
+	input[type=number].average-input { width: 60px; padding-left: 0px; padding-right: 0px; }
+	input[type=number].average-maths { width: 60px; padding-left: 0px; padding-right: 0px; }
 }
