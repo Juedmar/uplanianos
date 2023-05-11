@@ -386,11 +386,12 @@ function getResults() {
 
 	var theAverage = document.getElementById("average").value;
 	document.getElementById("finalAverage").value = (Math.round(theAverage * 10) / 10 ).toFixed(1);
+	
 
 	document.getElementById("getResults").value= "Actualizar";
 	document.getElementById('getResults').style.borderColor = "red";
 
-	 if (theAverage >= "4") { document.getElementById("finalAverage").style.color = "#306EFF";
+	 if (theAverage >= "4" && theAverage <= "7") { document.getElementById("finalAverage").style.color = "#306EFF";
 				 document.getElementById("finalAverage").style.background = "#BDEDFF";
 				 document.getElementById("finalAverage").style.borderColor = "cornflowerblue";
 				document.getElementById("finalAverage").style.fontWeight = "bold"; }
@@ -399,6 +400,13 @@ function getResults() {
 				document.getElementById("finalAverage").style.background = "pink";
 				document.getElementById("finalAverage").style.borderColor = "red";
 				document.getElementById("finalAverage").style.fontWeight = "normal"; }
+
+	 if (theAverage > "7") { document.getElementById("finalAverage").style.color = "red";
+				document.getElementById("finalAverage").style.background = "red";
+				document.getElementById("finalAverage").style.borderColor = "red";
+				document.getElementById("finalAverage").style.fontWeight = "normal";
+				alert("ERROR: Ingresar notas entre 1.0 y 7.0!"); }
+
 }
 </script>
 
