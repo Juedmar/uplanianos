@@ -13,6 +13,7 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Cálculo de Procentaje de Pruebas.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
 
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><b>Escala de Exigencia:</b> <text class="test-percent" id="testPercent">70%</text><br><br>
@@ -136,7 +137,18 @@ function doTheThing() {
 </script>
 
 
-
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
 
 </body>

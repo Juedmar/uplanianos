@@ -13,6 +13,8 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Manual del Estudiante.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
+
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-title"><b>Decreto Exento 277-2005 / 1290-2017.</b></div>
 	  <div class="grid-item-title"><b>Artículos de Evaluación y Asistencia.</b></div>
@@ -48,6 +50,21 @@
     </div>
 <br>
 </div>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 
 </body>
 </html>

@@ -13,6 +13,8 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Escala de Notas (70%)!</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
+
 	<div class="grid-container-seventy" style="grid-auto-flow: column;">
 	  <div class="grid-item-blue">%</div>
 	  <div class="grid-item">1</div>
@@ -444,6 +446,21 @@
     </div>
 <br>
 </div>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 
 </body>
 </html>

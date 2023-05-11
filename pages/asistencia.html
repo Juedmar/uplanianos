@@ -13,6 +13,7 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Simulación de Procentaje de Asistencia.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
 
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><text class="class-type" id="class-type"><b>Curso:</b> Teórico (</text> <text class="class-percent" id="class-percent">60%</text><text class="class-type"> ).</text><br><br>
@@ -119,6 +120,19 @@ function getResult() {
 }
 </script>
 
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
 
 </body>

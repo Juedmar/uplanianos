@@ -13,6 +13,7 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Simulación de Procentaje de Asistencia.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
 
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-tools"><br><text class="class-type" id="exam-title">Promedio Semestral (70%):<br><br>
@@ -93,6 +94,20 @@ function getResult() {
 	if (finalResult < 3.95) { document.getElementById("finalAverage").style.background = "darkred"; }
 	if (finalResult >= 3.95) { document.getElementById("finalAverage").style.background = "cornflowerblue"; }
 
+}
+</script>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
 }
 </script>
 

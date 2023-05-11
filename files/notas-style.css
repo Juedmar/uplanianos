@@ -12,7 +12,12 @@ body::-webkit-scrollbar { display: none; }
 
 p	{color: white;}
 h1	{color: white;}
-a	{ text-decoration: none; }
+a		{ color: cornflowerblue; text-decoration: none; }
+a:hover		{ color: blue; text-decoration: underline; }
+a:active	{ color: red; }
+a:visited	{ color: hotpink; }
+
+.return { position: absolute; right: 12px; top: 6px; color: white; font-size: 20px; transition: 3s; }
 
 * { box-sizing: border-box; }
 

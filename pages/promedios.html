@@ -13,6 +13,8 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Promedios Personalizados (con Porcentajes).</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
+
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><b>Cantidad de Evaluaciones:</b> <text class="test-number" id="valuePromedios">2</text><br><br>
 	  <input type="range" class="slidebar" min="2" max="8" value="2" id="rangePromedios" oninput="valuePromedios.innerText = this.value; howManyTests(); sumPercentages();"><br><br></div>
@@ -105,6 +107,7 @@
 	  <br>
 
 	  </div>
+
 	</div>
     <br>
     <br>
@@ -365,10 +368,31 @@ function clearGrades() {
 	  document.getElementById("testPercent6").value = '';
 	  document.getElementById("testPercent7").value = '';
 	  document.getElementById("testPercent8").value = '';
+	  document.getElementById("testResult1").value = '';
+	  document.getElementById("testResult2").value = '';
+	  document.getElementById("testResult3").value = '';
+	  document.getElementById("testResult4").value = '';
+	  document.getElementById("testResult5").value = '';
+	  document.getElementById("testResult6").value = '';
+	  document.getElementById("testResult7").value = '';
+	  document.getElementById("testResult8").value = '';
 	  document.getElementById("addition").value = '';
 	  document.getElementById("average").value = '';
 	  document.getElementById("finalAverage").value = '';
 	  document.getElementById("getResults").style.display = 'none';
+}
+</script>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
 }
 </script>
 

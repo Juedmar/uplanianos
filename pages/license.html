@@ -13,6 +13,8 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Acuerdo de Licencia.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
+
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-license"><br>
 					<b>Términos de uso:</b><br>Este recurso online, ya sea en formato de sitio web o aplicación/software para aplicación móvil se proporciona "tal cual", sin garantía de ningún tipo, expresa o implícita, y por la presente licencia de uso el usuario renuncia a todas las garantías implícitas, incluida cualquier garantía de comerciabilidad y garantía de idoneidad para un fin determinado. En ningún caso, el desarrollador será responsable de ningún reclamo, daño u otra responsabilidad, ya sea en una acción contractual, extracontractual o de otro tipo, que surja de, o en relación con el recurso web/software o el uso u otras transacciones en éste.<br><br>
@@ -27,6 +29,21 @@
     </div>
 <br>
 </div>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 
 </body>
 </html>

@@ -13,6 +13,8 @@
 
 <div class="main">
     <div class="labels"><b><p>Uplanianos Web App:</b> Promediar Evaluaciones Integrales.</p></div>
+    <a href="../index.html"><div id="return" class="return">&larrhk;</div></a>
+
 	<div class="grid-container-pages" style="grid-auto-flow: flow;">
 	  <div class="grid-item-slider"><br><b>Cantidad de Evaluaciones:</b> <text class="test-number" id="valueIntegrales">2</text><br><br>
 	  <input type="range" class="slidebar" min="2" max="12" value="2" id="rangeIntegrales" oninput="valueIntegrales.innerText = this.value; howManyTests()"><br><br></div>
@@ -315,6 +317,21 @@ function howManyTests() {
 			document.getElementById("average").style.borderColor = "cornflowerblue";
 }
 </script>
+
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 
 </body>
 </html>
