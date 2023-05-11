@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../media/uplanianos-icon.png">
+	<link rel="stylesheet" href="../files/pages-style.css">
+	<title>Uplanianos - Promedios Personalizados</title>
+</head>
+
+<body onload="hideGrades(); sumPercentages(); sumGrades(); ">
+
+<div class="main">
+    <div class="labels"><b><p>Uplanianos Web App:</b> Promedios Personalizados (con Porcentajes).</p></div>
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-item-slider"><br><b>Cantidad de Evaluaciones:</b> <text class="test-number" id="valuePromedios">2</text><br><br>
+	  <input type="range" class="slidebar" min="2" max="8" value="2" id="rangePromedios" oninput="valuePromedios.innerText = this.value; howManyTests(); sumPercentages();"><br><br></div>
+
+	  <div class="grid-item-tools">
+
+	  <div class="triple-container" style="width: 96%; margin-top: 6px;">
+	    <div class="triple-left" style="text-align: left;">Notas:</div>
+	    <div class="triple-center">Porciento:</div>
+	    <div class="triple-right">Cálculo:</div>
+	  </div>
+
+	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
+
+	  <div class="promedios-container" id="test1">
+	  <text class="test-titles">Evaluación N°1:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade1" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent1" min="1" max="100" step="1" value="60" placeholder="60" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult1" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test2">
+	  <text class="test-titles">Evaluación N°2:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade2" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent2" min="1" max="100" step="1" value="40" placeholder="40" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult2" min="1" max="any" step="0.1" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test3">
+	  <text class="test-titles">Evaluación N°3:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade3" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent3" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult3" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test4">
+	  <text class="test-titles">Evaluación N°4:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade4" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent4" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult4" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test5">
+	  <text class="test-titles">Evaluación N°5:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade5" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent5" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult5" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test6">
+	  <text class="test-titles">Evaluación N°6:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade6" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent6" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult6" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test7">
+	  <text class="test-titles">Evaluación N°7:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade7" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent7" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult7" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="promedios-container" id="test8">
+	  <text class="test-titles">Evaluación N°8:<br></text>
+	    <div class="triple-left">	<br><input type="number" class="average-input" id="testGrade8" min="1" max="7" step="0.1" value="" placeholder="0.0" onchange="sumGrades()"></div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="testPercent8" min="1" max="100" step="1" oninput="sumPercentages()"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="testResult8" min="1" max="any" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="triple-container" style="width: 96%; margin-left: 3px;">
+	    <div class="triple-left" style="margin-top: 24px;">	Sumatoria:</div>
+	    <div class="triple-center">	<br><input type="number" class="average-input" id="addition" min="1" max="100" step="1" value="100" placeholder="100" readonly disabled style="cursor: not-allowed;"></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="average" min="1" max="7" step="0.01" placeholder="0.00" readonly disabled></div>
+	  </div>
+
+	  <div class="triple-container" style="width: 96%; margin-left: 3px;">
+	    <div class="triple-left"></div>
+	    <div class="triple-center" style="margin-top: 24px;"><b>Promedio:</b></div>
+	    <div class="triple-right">	<br><input type="number" class="average-maths" id="finalAverage" min="1" max="7" step="0.1" placeholder="0.0" readonly disabled></div>
+	  </div>
+
+	  <hr style="width: 98%; margin: auto; margin-top: 12px; margin-bottom: 6px; margin-right: 12px;">
+
+	  <div class="double-container" id="buttons-div" style="margin-top: 18px;">
+	    <div class="triple-left"><input type="button" id="clearGrades" value="Borrar" onclick="clearGrades()"></b></div>
+	    <div class="triple-right"><input type="button" id="getResults" value="Promediar" onclick="getResults()"></div>
+	  </div>
+
+	  <br>
+
+	  </div>
+	</div>
+    <br>
+    <br>
+    </div>
+<br>
+</div>
+
+
+<script>
+function hideGrades() {
+         document.getElementById('test3').style.display = 'none'; document.getElementById('test4').style.display = 'none';
+         document.getElementById('test5').style.display = 'none'; document.getElementById('test6').style.display = 'none';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+}
+</script>
+
+
+<script>
+function howManyTests() {
+	var howManyTests = document.getElementById("rangePromedios").value;
+
+	if (howManyTests == "2") {
+         document.getElementById('test3').style.display = 'none'; document.getElementById('test4').style.display = 'none';
+         document.getElementById('test5').style.display = 'none'; document.getElementById('test6').style.display = 'none';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 60; document.getElementById('testPercent1').setAttribute('placeholder', 60);
+	 document.getElementById('testPercent2').value = 40; document.getElementById('testPercent2').setAttribute('placeholder', 40); }
+
+	if (howManyTests == "3") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'none';
+         document.getElementById('test5').style.display = 'none'; document.getElementById('test6').style.display = 'none';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 30; document.getElementById('testPercent1').setAttribute('placeholder', 30);
+	 document.getElementById('testPercent2').value = 30; document.getElementById('testPercent2').setAttribute('placeholder', 30);
+	 document.getElementById('testPercent3').value = 40; document.getElementById('testPercent3').setAttribute('placeholder', 40); }
+
+	if (howManyTests == "4") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'flex';
+         document.getElementById('test5').style.display = 'none'; document.getElementById('test6').style.display = 'none';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 20; document.getElementById('testPercent1').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent2').value = 30; document.getElementById('testPercent2').setAttribute('placeholder', 30);
+	 document.getElementById('testPercent3').value = 20; document.getElementById('testPercent3').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent4').value = 30; document.getElementById('testPercent4').setAttribute('placeholder', 30); }
+
+	if (howManyTests == "5") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'flex';
+         document.getElementById('test5').style.display = 'flex'; document.getElementById('test6').style.display = 'none';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 10; document.getElementById('testPercent1').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent2').value = 20; document.getElementById('testPercent2').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent3').value = 25; document.getElementById('testPercent3').setAttribute('placeholder', 25);
+	 document.getElementById('testPercent4').value = 20; document.getElementById('testPercent4').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent5').value = 25; document.getElementById('testPercent5').setAttribute('placeholder', 25); }
+
+	if (howManyTests == "6") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'flex';
+         document.getElementById('test5').style.display = 'flex'; document.getElementById('test6').style.display = 'flex';
+         document.getElementById('test7').style.display = 'none'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 10; document.getElementById('testPercent1').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent2').value = 20; document.getElementById('testPercent2').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent3').value = 15; document.getElementById('testPercent3').setAttribute('placeholder', 15);
+	 document.getElementById('testPercent4').value = 20; document.getElementById('testPercent4').setAttribute('placeholder', 20);
+	 document.getElementById('testPercent5').value = 15; document.getElementById('testPercent5').setAttribute('placeholder', 15);
+	 document.getElementById('testPercent6').value = 20; document.getElementById('testPercent6').setAttribute('placeholder', 20); }
+
+	if (howManyTests == "7") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'flex';
+         document.getElementById('test5').style.display = 'flex'; document.getElementById('test6').style.display = 'flex';
+         document.getElementById('test7').style.display = 'flex'; document.getElementById('test8').style.display = 'none';
+	 document.getElementById('testPercent1').value = 10; document.getElementById('testPercent1').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent2').value = 12; document.getElementById('testPercent2').setAttribute('placeholder', 12);
+	 document.getElementById('testPercent3').value = 18; document.getElementById('testPercent3').setAttribute('placeholder', 18);
+	 document.getElementById('testPercent4').value = 12; document.getElementById('testPercent4').setAttribute('placeholder', 12);
+	 document.getElementById('testPercent5').value = 18; document.getElementById('testPercent5').setAttribute('placeholder', 18);
+	 document.getElementById('testPercent6').value = 12; document.getElementById('testPercent6').setAttribute('placeholder', 12);
+	 document.getElementById('testPercent7').value = 18; document.getElementById('testPercent7').setAttribute('placeholder', 18); }
+
+	if (howManyTests == "8") {
+         document.getElementById('test3').style.display = 'flex'; document.getElementById('test4').style.display = 'flex';
+         document.getElementById('test5').style.display = 'flex'; document.getElementById('test6').style.display = 'flex';
+         document.getElementById('test7').style.display = 'flex'; document.getElementById('test8').style.display = 'flex';
+	 document.getElementById('testPercent1').value = 10; document.getElementById('testPercent1').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent2').value = 10; document.getElementById('testPercent2').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent3').value = 15; document.getElementById('testPercent3').setAttribute('placeholder', 15);
+	 document.getElementById('testPercent4').value = 10; document.getElementById('testPercent4').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent5').value = 10; document.getElementById('testPercent5').setAttribute('placeholder', 10);
+	 document.getElementById('testPercent6').value = 15; document.getElementById('testPercent6').setAttribute('placeholder', 15);
+	 document.getElementById('testPercent7').value = 15; document.getElementById('testPercent7').setAttribute('placeholder', 15);
+	 document.getElementById('testPercent8').value = 15; document.getElementById('testPercent8').setAttribute('placeholder', 15); }
+}
+</script>
+
+
+<script>
+function sumPercentages() {
+	var howManyTests = document.getElementById("rangePromedios").value;
+	var p1 = document.getElementById("testPercent1").value;
+	var p2 = document.getElementById("testPercent2").value;
+	var p3 = document.getElementById("testPercent3").value;
+	var p4 = document.getElementById("testPercent4").value;
+	var p5 = document.getElementById("testPercent5").value;
+	var p6 = document.getElementById("testPercent6").value;
+	var p7 = document.getElementById("testPercent7").value;
+	var p8 = document.getElementById("testPercent8").value;
+
+	if (howManyTests == "2") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "3") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "4") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(p4)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "5") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(p4) + parseInt(tp)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "6") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(p4) + parseInt(tp) +
+				parseInt(tp)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "7") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(p4) + parseInt(tp) +
+				parseInt(tp) + parseInt(p7)).toFixed(0); checkSumResult(); }
+	if (howManyTests == "8") { document.getElementById("addition").value = (parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(p4) + parseInt(tp) +
+				parseInt(tp) + parseInt(p7) + parseInt(p8)).toFixed(0); checkSumResult(); }
+}
+</script>
+
+
+<script>
+function checkSumResult() {
+	var sumResult = document.getElementById("addition").value;
+	 if (sumResult < 100) {
+		document.getElementById('getResults').style.display = 'none';
+		document.getElementById("addition").style.color = "red";
+		document.getElementById("addition").style.fontWeight = "normal"; }
+	 if (sumResult > 100) {
+		document.getElementById('getResults').style.display = 'none';
+		document.getElementById("addition").style.color = "red";
+		document.getElementById("addition").style.fontWeight = "normal"; }
+	 if (sumResult == 100) {
+		document.getElementById('getResults').style.display = 'initial';
+		document.getElementById("addition").style.color = "blue";
+		document.getElementById("addition").style.fontWeight = "bold"; }
+}
+</script>
+
+
+
+<script>
+function sumGrades() {
+	var howManyTests = document.getElementById("rangePromedios").value;
+
+	var t1 = document.getElementById("testGrade1").value; var t2 = document.getElementById("testGrade2").value;
+	var t3 = document.getElementById("testGrade3").value; var t4 = document.getElementById("testGrade4").value;
+	var t5 = document.getElementById("testGrade5").value; var t6 = document.getElementById("testGrade6").value;
+	var t7 = document.getElementById("testGrade7").value; var t8 = document.getElementById("testGrade8").value;
+
+	var p1 = document.getElementById("testPercent1").value; var p2 = document.getElementById("testPercent2").value;
+	var p3 = document.getElementById("testPercent3").value; var p4 = document.getElementById("testPercent4").value;
+	var p5 = document.getElementById("testPercent5").value; var p6 = document.getElementById("testPercent6").value;
+	var p7 = document.getElementById("testPercent7").value; var p8 = document.getElementById("testPercent8").value;
+
+	if (howManyTests == "2") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "3") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "4") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2);
+	 document.getElementById("testResult4").value = parseFloat(t4 * (p4 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "5") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2);
+	 document.getElementById("testResult4").value = parseFloat(t4 * (p4 * 0.01)).toFixed(2);
+	 document.getElementById("testResult5").value = parseFloat(t5 * (p5 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "6") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2);
+	 document.getElementById("testResult4").value = parseFloat(t4 * (p4 * 0.01)).toFixed(2);
+	 document.getElementById("testResult5").value = parseFloat(t5 * (p5 * 0.01)).toFixed(2);
+	 document.getElementById("testResult6").value = parseFloat(t6 * (p6 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "7") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2);
+	 document.getElementById("testResult4").value = parseFloat(t4 * (p4 * 0.01)).toFixed(2);
+	 document.getElementById("testResult5").value = parseFloat(t5 * (p5 * 0.01)).toFixed(2);
+	 document.getElementById("testResult6").value = parseFloat(t6 * (p6 * 0.01)).toFixed(2);
+	 document.getElementById("testResult7").value = parseFloat(t7 * (p7 * 0.01)).toFixed(2); }
+
+	if (howManyTests == "8") {
+	 document.getElementById("testResult1").value = parseFloat(t1 * (p1 * 0.01)).toFixed(2);
+	 document.getElementById("testResult2").value = parseFloat(t2 * (p2 * 0.01)).toFixed(2);
+	 document.getElementById("testResult3").value = parseFloat(t3 * (p3 * 0.01)).toFixed(2);
+	 document.getElementById("testResult4").value = parseFloat(t4 * (p4 * 0.01)).toFixed(2);
+	 document.getElementById("testResult5").value = parseFloat(t5 * (p5 * 0.01)).toFixed(2);
+	 document.getElementById("testResult6").value = parseFloat(t6 * (p6 * 0.01)).toFixed(2);
+	 document.getElementById("testResult7").value = parseFloat(t7 * (p7 * 0.01)).toFixed(2);
+	 document.getElementById("testResult8").value = parseFloat(t8 * (p8 * 0.01)).toFixed(2); }
+}
+</script>
+
+
+<script>
+function getResults() {
+	sumGrades();
+	var r1 = document.getElementById("testResult1").value; var r2 = document.getElementById("testResult2").value; 
+	var r3 = document.getElementById("testResult3").value; var r4 = document.getElementById("testResult4").value; 
+	var r5 = document.getElementById("testResult5").value; var r6 = document.getElementById("testResult6").value; 
+	var r7 = document.getElementById("testResult7").value; var r8 = document.getElementById("testResult8").value; 
+
+	var howManyTests = document.getElementById("rangePromedios").value;
+	if (howManyTests == "2") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2)).toFixed(2); }
+	if (howManyTests == "3") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3)).toFixed(2); }
+	if (howManyTests == "4") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4)).toFixed(2); }
+	if (howManyTests == "5") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4) + parseFloat(r5)).toFixed(2); }
+	if (howManyTests == "6") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4) + parseFloat(r5) +
+					parseFloat(r6)).toFixed(2); }
+	if (howManyTests == "7") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4) + parseFloat(r5) +
+					parseFloat(r6) + parseFloat(r7)).toFixed(2); }
+	if (howManyTests == "8") { document.getElementById("average").value = (parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4) + parseFloat(r5) +
+					parseFloat(r6) + parseFloat(r7) + parseFloat(r8)).toFixed(2); }
+
+	var theAverage = document.getElementById("average").value;
+	document.getElementById("finalAverage").value = (Math.round(theAverage * 10) / 10 ).toFixed(1);
+	
+
+	if (theAverage >= "4") { document.getElementById("finalAverage").style.color = "#306EFF";
+				document.getElementById("finalAverage").style.background = "#BDEDFF";
+				document.getElementById("finalAverage").style.borderColor = "cornflowerblue"; }
+
+	if (theAverage < "4") { document.getElementById("finalAverage").style.color = "red";
+				document.getElementById("finalAverage").style.background = "pink";
+				document.getElementById("finalAverage").style.borderColor = "red"; }
+}
+</script>
+
+<script>
+function clearGrades() {
+	  document.getElementById("testGrade1").value = '';
+	  document.getElementById("testGrade2").value = '';
+	  document.getElementById("testGrade3").value = '';
+	  document.getElementById("testGrade4").value = '';
+	  document.getElementById("testGrade5").value = '';
+	  document.getElementById("testGrade6").value = '';
+	  document.getElementById("testGrade7").value = '';
+	  document.getElementById("testGrade8").value = '';
+	  document.getElementById("testPercent1").value = '';
+	  document.getElementById("testPercent2").value = '';
+	  document.getElementById("testPercent3").value = '';
+	  document.getElementById("testPercent4").value = '';
+	  document.getElementById("testPercent5").value = '';
+	  document.getElementById("testPercent6").value = '';
+	  document.getElementById("testPercent7").value = '';
+	  document.getElementById("testPercent8").value = '';
+	  document.getElementById("addition").value = '';
+	  document.getElementById("average").value = '';
+	  document.getElementById("finalAverage").value = '';
+	  document.getElementById("getResults").style.display = 'none';
+}
+</script>
+
+</body>
+</html>
