@@ -417,11 +417,12 @@ function getResults() {
 		document.getElementById("finalAverage").style.fontWeight = "normal"; }
 
 	 if (finalResult > 7) { document.getElementById("finalAverage").value = Math.abs(finalResult * 0.1).toFixed(0);
-		document.getElementById("finalAverage").style.color = "red";
+		document.getElementById("finalAverage").style.color = "white";
 		document.getElementById("finalAverage").style.background = "red";
 		document.getElementById("finalAverage").style.borderColor = "red";
 		document.getElementById("finalAverage").style.fontWeight = "normal";
-		alert("Error: ingresar notas entre 1.0 y 7.0"); }
+		document.getElementById("finalAverage").value = "0.0";
+		alert("ERROR:\nIngresar notas entre 1.0 y 7.0!\n(Use valores decimales)."); }
 }
 </script>
 
@@ -453,7 +454,13 @@ function clearGrades() {
 	  document.getElementById("testResult8").value = '';
 	  document.getElementById("addition").value = '';
 	  document.getElementById("average").value = '';
+
 	  document.getElementById("finalAverage").value = '';
+	  document.getElementById("finalAverage").style.color = "black";
+	  document.getElementById("finalAverage").style.background = "gray";
+	  document.getElementById("finalAverage").style.borderColor = "cornflowerblue";
+	  document.getElementById("finalAverage").style.fontWeight = "normal";
+
 	  document.getElementById("getResults").style.display = 'none';
 	  document.getElementById("getResults").value= "Promediar";
 }
