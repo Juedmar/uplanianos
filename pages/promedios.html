@@ -234,15 +234,18 @@ function checkSumResult() {
 	 if (sumResult < 100) {
 		document.getElementById('getResults').style.display = 'none';
 		document.getElementById("addition").style.color = "red";
-		document.getElementById("addition").style.fontWeight = "normal"; }
+		document.getElementById("addition").style.fontWeight = "normal";
+		checkGradeRange(); }
 	 if (sumResult > 100) {
 		document.getElementById('getResults').style.display = 'none';
 		document.getElementById("addition").style.color = "red";
-		document.getElementById("addition").style.fontWeight = "normal"; }
+		document.getElementById("addition").style.fontWeight = "normal";
+		checkGradeRange(); }
 	 if (sumResult == 100) {
 		document.getElementById('getResults').style.display = 'initial';
 		document.getElementById("addition").style.color = "blue";
-		document.getElementById("addition").style.fontWeight = "bold"; }
+		document.getElementById("addition").style.fontWeight = "bold";
+		checkGradeRange(); }
 }
 </script>
 
