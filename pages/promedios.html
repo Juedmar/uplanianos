@@ -326,15 +326,6 @@ function checkGradeRange() {
 	var t5 = document.getElementById("testGrade5").value; var t6 = document.getElementById("testGrade6").value;
 	var t7 = document.getElementById("testGrade7").value; var t8 = document.getElementById("testGrade8").value;
 
-	 if (t1 == 1 || t1 == 2 || t1 == 3 || t1 == 4 || t1 == 5 || t1 == 6 || t1 == 7) { document.getElementById("testGrade1").value = Math.abs(t1).toFixed(1); }
-	 if (t2 == 1 || t2 == 2 || t2 == 3 || t2 == 4 || t2 == 5 || t2 == 6 || t2 == 7) { document.getElementById("testGrade2").value = Math.abs(t2).toFixed(1); }
-	 if (t3 == 1 || t3 == 2 || t3 == 3 || t3 == 4 || t3 == 5 || t3 == 6 || t3 == 7) { document.getElementById("testGrade3").value = Math.abs(t3).toFixed(1); }
-	 if (t4 == 1 || t4 == 2 || t4 == 3 || t4 == 4 || t4 == 5 || t4 == 6 || t4 == 7) { document.getElementById("testGrade4").value = Math.abs(t4).toFixed(1); }
-	 if (t5 == 1 || t5 == 2 || t5 == 3 || t5 == 4 || t5 == 5 || t5 == 6 || t5 == 7) { document.getElementById("testGrade5").value = Math.abs(t5).toFixed(1); }
-	 if (t6 == 1 || t6 == 2 || t6 == 3 || t6 == 4 || t6 == 5 || t6 == 6 || t6 == 7) { document.getElementById("testGrade6").value = Math.abs(t6).toFixed(1); }
-	 if (t7 == 1 || t7 == 2 || t7 == 3 || t7 == 4 || t7 == 5 || t7 == 6 || t7 == 7) { document.getElementById("testGrade7").value = Math.abs(t7).toFixed(1); }
-	 if (t8 == 1 || t8 == 2 || t8 == 3 || t8 == 4 || t8 == 5 || t8 == 6 || t8 == 7) { document.getElementById("testGrade8").value = Math.abs(t8).toFixed(1); }
-
 	 if (t1 == "") { document.getElementById("testGrade1").style.background = "white"; }
 	 if (t2 == "") { document.getElementById("testGrade2").style.background = "white"; }
 	 if (t3 == "") { document.getElementById("testGrade3").style.background = "white"; }
@@ -343,6 +334,15 @@ function checkGradeRange() {
 	 if (t6 == "") { document.getElementById("testGrade6").style.background = "white"; }
 	 if (t7 == "") { document.getElementById("testGrade7").style.background = "white"; }
 	 if (t8 == "") { document.getElementById("testGrade8").style.background = "white"; }
+
+	 if (t1 == 1 || t1 == 2 || t1 == 3 || t1 == 4 || t1 == 5 || t1 == 6 || t1 == 7) { document.getElementById("testGrade1").value = Math.abs(t1).toFixed(1); }
+	 if (t2 == 1 || t2 == 2 || t2 == 3 || t2 == 4 || t2 == 5 || t2 == 6 || t2 == 7) { document.getElementById("testGrade2").value = Math.abs(t2).toFixed(1); }
+	 if (t3 == 1 || t3 == 2 || t3 == 3 || t3 == 4 || t3 == 5 || t3 == 6 || t3 == 7) { document.getElementById("testGrade3").value = Math.abs(t3).toFixed(1); }
+	 if (t4 == 1 || t4 == 2 || t4 == 3 || t4 == 4 || t4 == 5 || t4 == 6 || t4 == 7) { document.getElementById("testGrade4").value = Math.abs(t4).toFixed(1); }
+	 if (t5 == 1 || t5 == 2 || t5 == 3 || t5 == 4 || t5 == 5 || t5 == 6 || t5 == 7) { document.getElementById("testGrade5").value = Math.abs(t5).toFixed(1); }
+	 if (t6 == 1 || t6 == 2 || t6 == 3 || t6 == 4 || t6 == 5 || t6 == 6 || t6 == 7) { document.getElementById("testGrade6").value = Math.abs(t6).toFixed(1); }
+	 if (t7 == 1 || t7 == 2 || t7 == 3 || t7 == 4 || t7 == 5 || t7 == 6 || t7 == 7) { document.getElementById("testGrade7").value = Math.abs(t7).toFixed(1); }
+	 if (t8 == 1 || t8 == 2 || t8 == 3 || t8 == 4 || t8 == 5 || t8 == 6 || t8 == 7) { document.getElementById("testGrade8").value = Math.abs(t8).toFixed(1); }
 
 	 if (t1 >= 1 && t1 < 4) { document.getElementById("testGrade1").style.background = "white"; document.getElementById("testGrade1").style.color = "red"; }
 	 if (t2 >= 1 && t2 < 4) { document.getElementById("testGrade2").style.background = "white"; document.getElementById("testGrade2").style.color = "red"; }
@@ -362,14 +362,23 @@ function checkGradeRange() {
 	 if (t7 >= 4 && t7 <= 7) { document.getElementById("testGrade7").style.background = "white"; document.getElementById("testGrade7").style.color = "blue"; }
 	 if (t8 >= 4 && t8 <= 7) { document.getElementById("testGrade8").style.background = "white"; document.getElementById("testGrade8").style.color = "blue"; }
 
-	 if (t1 > 0 && t1 < 1 || t1 >= 7.1) { document.getElementById("testGrade1").style.background = "red"; document.getElementById("testGrade1").style.color = "black"; }
-	 if (t2 > 0 && t2 < 1 || t2 >= 7.1) { document.getElementById("testGrade2").style.background = "red"; document.getElementById("testGrade2").style.color = "black"; }
-	 if (t3 > 0 && t3 < 1 || t3 >= 7.1) { document.getElementById("testGrade3").style.background = "red"; document.getElementById("testGrade3").style.color = "black"; }
-	 if (t4 > 0 && t4 < 1 || t4 >= 7.1) { document.getElementById("testGrade4").style.background = "red"; document.getElementById("testGrade4").style.color = "black"; }
-	 if (t5 > 0 && t5 < 1 || t5 >= 7.1) { document.getElementById("testGrade5").style.background = "red"; document.getElementById("testGrade5").style.color = "black"; }
-	 if (t6 > 0 && t6 < 1 || t6 >= 7.1) { document.getElementById("testGrade6").style.background = "red"; document.getElementById("testGrade6").style.color = "black"; }
-	 if (t7 > 0 && t7 < 1 || t7 >= 7.1) { document.getElementById("testGrade7").style.background = "red"; document.getElementById("testGrade7").style.color = "black"; }
-	 if (t8 > 0 && t8 < 1 || t8 >= 7.1) { document.getElementById("testGrade8").style.background = "red"; document.getElementById("testGrade8").style.color = "black"; }
+	 if (t1 > 0 && t1 < 1 || t1 >= 7.1) { document.getElementById("testGrade1").style.background = "hotpink"; document.getElementById("testGrade1").style.color = "black"; }
+	 if (t2 > 0 && t2 < 1 || t2 >= 7.1) { document.getElementById("testGrade2").style.background = "hotpink"; document.getElementById("testGrade2").style.color = "black"; }
+	 if (t3 > 0 && t3 < 1 || t3 >= 7.1) { document.getElementById("testGrade3").style.background = "hotpink"; document.getElementById("testGrade3").style.color = "black"; }
+	 if (t4 > 0 && t4 < 1 || t4 >= 7.1) { document.getElementById("testGrade4").style.background = "hotpink"; document.getElementById("testGrade4").style.color = "black"; }
+	 if (t5 > 0 && t5 < 1 || t5 >= 7.1) { document.getElementById("testGrade5").style.background = "hotpink"; document.getElementById("testGrade5").style.color = "black"; }
+	 if (t6 > 0 && t6 < 1 || t6 >= 7.1) { document.getElementById("testGrade6").style.background = "hotpink"; document.getElementById("testGrade6").style.color = "black"; }
+	 if (t7 > 0 && t7 < 1 || t7 >= 7.1) { document.getElementById("testGrade7").style.background = "hotpink"; document.getElementById("testGrade7").style.color = "black"; }
+	 if (t8 > 0 && t8 < 1 || t8 >= 7.1) { document.getElementById("testGrade8").style.background = "hotpink"; document.getElementById("testGrade8").style.color = "black"; }
+
+	 if (t1 >= 10 && t1 <= 70) { document.getElementById("testGrade1").value = Math.abs(t1 * 0.1).toFixed(1); document.getElementById("testGrade1").style.background = "white"; }
+	 if (t2 >= 10 && t2 <= 70) { document.getElementById("testGrade2").value = Math.abs(t2 * 0.1).toFixed(1); document.getElementById("testGrade2").style.background = "white"; }
+	 if (t3 >= 10 && t3 <= 70) { document.getElementById("testGrade3").value = Math.abs(t3 * 0.1).toFixed(1); document.getElementById("testGrade3").style.background = "white"; }
+	 if (t4 >= 10 && t4 <= 70) { document.getElementById("testGrade4").value = Math.abs(t4 * 0.1).toFixed(1); document.getElementById("testGrade4").style.background = "white"; }
+	 if (t5 >= 10 && t5 <= 70) { document.getElementById("testGrade5").value = Math.abs(t5 * 0.1).toFixed(1); document.getElementById("testGrade5").style.background = "white"; }
+	 if (t6 >= 10 && t6 <= 70) { document.getElementById("testGrade6").value = Math.abs(t6 * 0.1).toFixed(1); document.getElementById("testGrade6").style.background = "white"; }
+	 if (t7 >= 10 && t7 <= 70) { document.getElementById("testGrade7").value = Math.abs(t7 * 0.1).toFixed(1); document.getElementById("testGrade7").style.background = "white"; }
+	 if (t8 >= 10 && t8 <= 70) { document.getElementById("testGrade8").value = Math.abs(t8 * 0.1).toFixed(1); document.getElementById("testGrade8").style.background = "white"; }
 }
 
 function showButton() { document.getElementById('getResults').style.display = 'initial'; }
