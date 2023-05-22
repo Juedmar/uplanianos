@@ -17,7 +17,7 @@ a:hover		{ color: blue; text-decoration: underline; }
 a:active	{ color: red; }
 a:visited	{ color: hotpink; }
 
-.return { position: absolute; right: 12px; top: 6px; color: white; font-size: 20px; transition: 3s; opacity: 0.1; }
+.return { position: absolute; right: 12px; top: 6px; color: white; font-size: 20px; transition: 3s; }
 
 * { box-sizing: border-box; }
 
