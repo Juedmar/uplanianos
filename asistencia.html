@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Porcentaje de Asistencia</title>
+</head>
+
+<body>
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+<div class="main">
+  <div class="labels"><div><p>
+      <select class="titleMenu" id="titleMenu" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Simulación Asistencia.</p></div>
+  </div>
+
+<script type="text/javascript">
+document.getElementById('titleMenu').addEventListener('change', function() {
+ if (titleMenu.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenu.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenu.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenu.value == 4) {blurMenu(); window.location = "calendario.html"}
+ if (titleMenu.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenu.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenu.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenu.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenu.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenu.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenu.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenu.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenu.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenu.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenu.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenu.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenu').value = 0; document.getElementById('titleMenu').blur();}
+</script> 
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-item-slider"><br><text class="class-type" id="class-type"><b>Curso Teórico</b> (</text> <text class="class-percent" id="class-percent">60%</text><text class="class-type"> ).</text><br><br>
+	  <input type="range" class="slidebar" min="1" max="3" value="2" id="classType" oninput="classCategory(); getResult()"><br><br></div>
+
+	  <div class="grid-item-tools"><br><b>Asistencia:</b>
+	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
+	  <div class="double-container">
+	    <div class="test-left" style="margin-top: 16px;">Clases realizadas:</div>
+	    <div class="test-right"><input type="number" class="attendance" id="classes" min="0" max="80" step="1" value="20" readonly disabled></div>
+	  </div>
+	  <input type="range" class="slidebar" id="classSlider" min="1" max="80" value="20" oninput="classUpdate(); getResult()"><br><br>
+
+
+	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
+
+
+	  <div class="double-container">
+	    <div class="test-left" style="margin-top: 16px;">Mi asistencia:</div>
+	    <div class="test-right"><input type="number" class="attendance" id="attendance" min="0" max="80" step="1" value="0" readonly disabled></div>
+	  </div>
+	  <input type="range" class="slidebar" id="attendanceSlider" min="0" max="20" value="0" oninput="attendanceUpdate(); getResult()"><br><br>
+	  <br>
+	  </div>
+
+	  <div class="grid-item-results" id="resultDiv">
+	    <div class="double-container">
+	    <div class="test-left"><b>Ausencias:</b><br><br> <text class="result-text" id="absences">0</text><br><br></div>
+	    <div class="test-right"><b>Porcentaje:</b><br><br> <text class="result-text" id="percentage">0</text><text class="result-text">%</text><br><br></div>
+	  </div></div>
+
+	</div>
+    <br>
+    <br>
+    </div>
+<br>
+</div>
+
+
+
+
+<script type="text/javascript">
+function getLinkValues() {
+
+// GETTING VALUES FROM LINK
+var category = (new URLSearchParams(window.location.search)).get("tipo");
+var classTotal = (new URLSearchParams(window.location.search)).get("clases");
+var turnUp = (new URLSearchParams(window.location.search)).get("asiste");
+
+// CHECKING CLASS TYPE / CATEGORY
+var classType = document.getElementById('classType');
+if (category == "" || category == null || category == "0") {classType.value = 2; classCategory()}
+if (category == 1) {classType.value = category; classCategory(); getResult()}
+if (category == 2) {classType.value = category; classCategory(); getResult()}
+if (category == 3) {classType.value = category; classCategory(); getResult()}
+
+// DECLARING DOCUMENT ELEMENTS
+var classes = document.getElementById('classes');
+var classSlider = document.getElementById('classSlider');
+var attendance = document.getElementById('attendance');
+var attendanceSlider = document.getElementById('attendanceSlider');
+
+// UPDATING CLASS AMOUNT
+if (classTotal >= 1 && classTotal <= 80) {classes.value = classTotal; classSlider.value = classTotal; classUpdate(); getResult()}
+else {classes.value = 20; classSlider.value = 20};
+
+// UPDATING STUDENT ATTENDANCE
+if (turnUp !== null) {attendance.value = classTotal; attendanceSlider.value = turnUp; attendanceUpdate(); getResult()}
+else {attendance.value = 0; attendanceSlider.value = 0};
+
+// UPDATING FOR ZERO VALUE
+if (classTotal == 0) {classes.value = 20; classSlider.value = 20}
+if (turnUp == 0) {attendance.value = 0; attendanceSlider.value = 0}
+
+}
+
+// /====================================================\
+// | Format: /asistencia.html?tipo=2&clases=12&asiste=0 |
+// \====================================================/
+</script>
+
+
+
+<script type="text/javascript">
+function classCategory() {
+  var classType = document.getElementById("classType").value;
+
+  if (classType == "1") {
+    document.getElementById('class-type').innerText= "Curso Teórico (";
+    document.getElementById('class-percent').innerText= "60%"; }
+
+  if (classType == "2") {
+    document.getElementById('class-type').innerText= "Curso Teórico-Práctico (";
+    document.getElementById('class-percent').innerText= "75%"; }
+
+  if (classType == "3") {
+    document.getElementById('class-type').innerText= "Taller / Laboratorio (";
+    document.getElementById('class-percent').innerText= "+85%"; }
+
+}
+</script>
+
+
+
+<script type="text/javascript">
+function classUpdate() {
+  var howManyClasses = document.getElementById("classSlider").value;
+  var theirAttendance = document.getElementById("attendanceSlider").value;
+  document.getElementById('classes').value = howManyClasses;
+  document.getElementById('attendanceSlider').setAttribute('max', howManyClasses);
+
+  if (howManyClasses < theirAttendance ) { document.getElementById('attendance').value = howManyClasses}
+}
+</script>
+
+
+
+<script type="text/javascript">
+function attendanceUpdate() {
+  var whatAttendance = document.getElementById("attendanceSlider").value;
+  document.getElementById('attendance').value = whatAttendance;
+}
+</script>
+
+
+
+<script type="text/javascript">
+function getResult() {
+  var howManyClasses = document.getElementById("classes").value;
+  var whatAttendance = document.getElementById("attendanceSlider").value;
+  var finalPercent = ((whatAttendance * 100) / howManyClasses).toFixed(0);
+  document.getElementById('absences').innerText = (howManyClasses - whatAttendance);
+  document.getElementById('percentage').innerText = finalPercent;
+
+  var percentage = document.getElementById("percentage").value;
+  var classType = document.getElementById("classType").value;
+
+  var resultDiv = document.getElementById('resultDiv')
+
+  if (classType == "1") {
+    if (finalPercent < 70) { resultDiv.style.background = "purple"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 60) { resultDiv.style.background = "maroon"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 40) { resultDiv.style.background = "darkred"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 0) { resultDiv.style.background = "gray"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 80) { resultDiv.style.background = "royalblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 90) { resultDiv.style.background = "cornflowerblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 100) { resultDiv.style.background = "green"; resultDiv.style.transition = "background-color 0.6s"}
+  }
+
+  if (classType == "2") {
+    if (finalPercent < 75) { resultDiv.style.background = "purple"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 60) { resultDiv.style.background = "maroon"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 30) { resultDiv.style.background = "darkred"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 0) { resultDiv.style.background = "gray"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 75) { resultDiv.style.background = "royalblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 85) { resultDiv.style.background = "cornflowerblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 100) { resultDiv.style.background = "green"; resultDiv.style.transition = "background-color 0.6s"}
+  }
+
+  if (classType == "3") {
+    if (finalPercent < 85) { resultDiv.style.background = "purple"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 60) { resultDiv.style.background = "maroon"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 40) { resultDiv.style.background = "darkred"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent <= 10) { resultDiv.style.background = "red"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 0) { resultDiv.style.background = "gray"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 85) { resultDiv.style.background = "royalblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent >= 95) { resultDiv.style.background = "cornflowerblue"; resultDiv.style.transition = "background-color 0.6s"}
+    if (finalPercent == 100) { resultDiv.style.background = "green"; resultDiv.style.transition = "background-color 0.6s"}
+  }
+
+// UPDATE KNOWLEDGE PROGRESS:
+knowledgeProgress();
+}
+</script>
+
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="scripts/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+     $('textarea').each(function(){
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+    });
+}
+
+window.onload = function() {
+    $('textarea').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+knowledgeProgress();
+getLinkValues();
+}
+</script>
+
+
+<!- USER STATS PROGRESS COUNTER ->
+<div>
+<textarea class="progressArea" id="knowledgeProgress" style="top: 10px">0</textarea>
+</div>
+<!- USER STATS PROGRESS COUNTER ->
+
+<script type="text/javascript">
+function knowledgeProgress() {
+// =========================
+// USER STATS CALCULATION
+// =========================
+
+// DECLARING VARIABLES!
+var knowledgeProgress = document.getElementById("knowledgeProgress").value
+var additionValue = 1 * 0.02
+var newProgress = parseFloat(knowledgeProgress) + parseFloat(additionValue);
+ if (knowledgeProgress < 100) { setTimeout(() => {
+    document.getElementById("knowledgeProgress").value = newProgress.toFixed(2);
+    // console.log("El nuevo progreso es de " + newProgress.toFixed(1));
+    }, 1000);}
+ if (knowledgeProgress >= 100) {document.getElementById("knowledgeProgress").value = 100}
+}
+</script>
+
+
+
+</body>
+</html>

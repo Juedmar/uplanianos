@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Manual Estudiante</title>
+</head>
+
+<body>
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+<div class="main">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenu" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Manual Estudiante.</p></div>
+
+<script type="text/javascript">
+document.getElementById('titleMenu').addEventListener('change', function() {
+ if (titleMenu.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenu.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenu.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenu.value == 4) {blurMenu(); window.location = "calendario.html"}
+ if (titleMenu.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenu.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenu.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenu.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenu.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenu.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenu.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenu.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenu.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenu.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenu.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenu.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenu').value = 0; document.getElementById('titleMenu').blur();}
+function exitSoon(){window.location = "index.html"}
+</script>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-item-title"><b>Decreto Exento 277-2005 / 0174-2023.</b></div>
+	  <div class="grid-item-title"><b>Artículos de Evaluación, Calificación y Promoción (Título VIII).</b></div>
+
+	  <div class="grid-item"><b>Artículo 35°:</b><br><ul>Se entiende por evaluación académica el proceso que tiene por objeto valorar el trabajo académico o rendimiento de un alumno respecto de uno o más contenidos contemplados en un programa durante un periodo lectivo.</ul></div>
+	  <div class="grid-item"><b>Artículo 36°:</b><br><ul>La evaluación constituye un proceso permanente, fundamentado e informado y como tal deben considerarse evaluaciones diagnósticas, evaluaciones formativas y evaluaciones sumativas. Deberán existir diversas formas de llevarlas a cabo y ser distribuidas adecuadamente a lo largo del período correspondiente.</ul></div>
+	  <div class="grid-item"><b>Artículo 37°:</b><br><ul>Las evaluaciones diagnósticas identifican el estado o situación de aprendizaje del alumno al inicio de un programa o unidad. Su propósito es ayudar al alumno para el mejor logro de los objetivos y no deben tener incidencia en sus calificaciones.<br><br>
+								Las evaluaciones formativas se aplican durante el proceso instruccional, utilizando diversos procedimientos evaluativos en su operación. Su propósito consiste en corregir deficiencias y en optimizar los aprendizajes de cada alumno según sus diagnósticos y necesidades personales de aprendizaje. Sus resultados pueden ser considerados en las calificaciones.<br><br>
+								Las evaluaciones sumativas son las que se aplican al término de una unidad o sector significativo del curso y su resultado se traduce en calificaciones.</ul></div>
+	  <div class="grid-item"><b>Artículo 38°:</b><br><ul>Son procedimientos válidos de evaluación educacional las pruebas escritas y orales; las disertaciones; las carpetas o folios; los talleres y laboratorios: los trabajos prácticos y de investigación; los informes escritos, visuales, audiovisuales y artículos o monografías; los controles de análisis y comprensión lectora; las entrevistas, las escalas, los métodos de observación, los contenidos, los textos y metodologías instruccionales relativos a los logros académicos de los alumnos y, en general, cualquier procedimiento que se ajuste a los objetivos educacionales.</ul></div>
+	  <div class="grid-item"><b>Artículo 39°:</b><br><ul>Las calificaciones se expresarán en una <a onclick="knowledgeProgress();" href="notas.html">escala de notas</a> que será de <font color="red">1.0</font> a <font color="blue">7.0</font>.<br><br>
+								<a onclick="knowledgeProgress();" href="pruebas.html">Las notas</a> se expresarán con números enteros y la fracción en décimas. Las centésimas de 0,05 o mayores se aproximaran a la décima superior y las menores se eliminaran.</ul></div>
+	  <div class="grid-item"><b>Artículo 40°:</b><br><ul>La nota final corresponderá al promedio aritmético  de  todas  las calificaciones ponderadas obtenidas por el alumno durante el desarrollo de una asignatura.<br><br>
+								La nota mínima de aprobación de una asignatura será <font color="blue">4.0</font>.<br><br>
+								Las calificaciones finales deberá expresarse hasta con un decimal.<br><br>
+								La Dirección General de Docencia a solicitud de las unidades académicas correspondientes podrá autorizar, a través de resolución fundada, que determinadas asignaturas de los planes de estudio de las carreras o programas sean evaluadas a través de conceptos "aprobado" o "reprobado". La evaluación con conceptos no se considerará para el cálculo del promedio parcial o final de notas del alumno. No obstante, para ser promovido, el estudiante deberá obtener la calificación de "aprobado".</ul></div>
+	  <div class="grid-item"><b>Artículo 41°:</b><br><ul>Habrá a lo menos <a onclick="knowledgeProgress();" href="integrales.html">tres evaluaciones sumativas coeficiente dos</a> durante el semestre.<br><br>
+								La fijación de fechas de las evaluaciones sumativas coeficiente dos deberá ser anunciada a los alumnos al comienzo del semestre. Cualquier modificación en el calendario de evaluación será avisada por los profesores, a lo menos dos semanas antes de su realización salvo que en conjunto con los alumnos se acuerde otra fecha.<br><br>
+								Durante el semestre el Jefe de Carrera deberá cautelar que en los cursos no se apliquen más de dos pruebas sumativas coeficiente dos en el mismo día. En caso de persistir la coincidencia, los profesores involucrados deberán entregar la reprogramación de las fechas de las pruebas al Jefe de Carrera.</ul></div>
+	  <div class="grid-item"><b>Artículo 42°:</b><br><ul>La calificación final de aquellas asignaturas que sean impartidas por dos o más profesores se calculará al término del curso, promediando todas las notas conforme a las disposiciones anteriores.</ul></div>
+	  <div class="grid-item"><a id="art43" style="text-decoration: none; color: black;"><b>Artículo 43°:</a></b><br><ul>Si al término del semestre el alumno no obtiene la nota de aprobación <font color="blue">4.0</font>, deberá rendir una <a onclick="knowledgeProgress();" href="examen.html">prueba sumativa especial</a> en los plazos que establezca la Universidad, siempre que tenga un promedio de presentación acumulado entre <font color="red">3.5</font> y <font color="red">3.9</font> y su porcentaje de asistencia sea a lo menos de un 60% de las clases realizadas, salvo que se trate de asignaturas que requieran un porcentaje mayor de asistencia, en conformidad a lo dispuesto en el <a onclick="knowledgeProgress();" href="#art47">artículo 47°</a>.<br><br>
+								El resultado de esta prueba sumativa especial equivaldrá al 30% de la nota final.<br><br>
+								Si el alumno no se presentara a dar esta prueba especial deberá ser calificado con la nota de presentación.</ul></div>
+	  <div class="grid-item"><b>Artículo 44°:</b><br><ul>Los alumnos tendrán derecho a conocer los resultados y calificación de las evaluaciones dentro de un plazo que no podrá exceder a 15 días hábiles contados desde la fecha del control respectivo.<br><br>
+								Los resultados de las pruebas deberán ser informados y comentados en clases, sin perjuicio de que sean comentados en forma individual.<br><br>
+								El profesor señalara el día y hora en que comunicará sus resultados y podrán ser entregados a la Jefatura de Carrera respectiva.<br><br>
+								Cualquier publicación de resultados en fichero será considerada como complementaria y al utilizarla se deberá identificar a los alumnos por su número de matrícula. El no cumplimiento de estas normas no determinará la invalidación de las evaluaciones.</ul></div>
+	  <div class="grid-item"><a id="art45" style="text-decoration: none; color: black;"><b>Artículo 45°:</a></b><br><ul>En todas las evaluaciones previamente fijadas la asistencia de los alumnos es obligatoria.<br><br>
+								El alumno que no se presente a una evaluación podrá solicitar a su Jefe de Carrera o Coordinador, según corresponda, <a onclick="knowledgeProgress();" href="justify.html">en forma escrita</a> y siempre que exista una causa debidamente justificada, la autorización para la fijación de una nueva fecha para rendirla.<br><br>
+								Esta solicitud deberá ser presentada hasta un plazo máximo de 2 días hábiles después de su realización.<br><br>
+								En caso de enfermedad el alumno deberá, además, presentar un certificado médico visado por el Servicio Médico de la Universidad en un plazo que no podrá exceder los 2 días hábiles, contados a partir de la realización del control.<br><br>
+								El Jefe de Carrera emitirá la autorización para rendir la prueba. En los casos previstos en los incisos anteriores, la nueva fecha y condiciones de la evaluación serán fijadas al alumno por el profesor de la asignatura respectiva.<br><br>
+								El alumno que no justifique su inasistencia a una evaluación o cuya solicitud haya sido rechazada o presentada fuera de plazo, será calificado con nota 1,0 para los efectos del cálculo de su promedio aritmético.</ul></div>
+	  <div class="grid-item"><b>Artículo 46°:</b><br><ul>Los profesores deberán llevar un registro actualizado de la asistencia, calificaciones de los alumnos y desarrollo del programa de la asignatura.<br><br>
+								El registro actualizado de la asistencia se deberá cumplir para efectos administrativos y otros que determina este reglamento.<br><br>
+								En las asignaturas teóricas, las inasistencias de los alumnos a clases no deberán ser consideradas para la aprobación o reprobación del curso, sin perjuicio de lo contemplado en el <a onclick="knowledgeProgress();" href="#art43">artículo 43°</a> de este reglamento.</ul></div>
+	  <div class="grid-item"><a id="art47" style="text-decoration: none; color: black;"><b>Artículo 47°:</b></a><br><ul>Los alumnos que efectúen su práctica profesional deberán contar con una asistencia del 100%.<br><br>
+								Las asignaturas que impliquen laboratorios, talleres o trabajos prácticos deberán contar con una asistencia de un 100%, salvo en casos debidamente calificados en que podrá autorizarse hasta un 85%. Esta solicitud será resuelta por el Jefe de Carrera respectivo, previo informe del profesor de la asignatura que corresponda.<br><br>
+								Todos los ramos <a onclick="knowledgeProgress();" href="asistencia.html">prácticos o teórico-prácticos</a> que se impartan en la Universidad tendrán una exigencia de un 75% de asistencia.<br><br>
+								Las asignaturas que contemplen partes teóricas y partes prácticas deberán regirse por lo señalado en el presente artículo en lo que dice relación con la parte práctica. El porcentaje asignado a <a onclick="knowledgeProgress();" href="promedios.html">la parte teórica y a la parte práctica</a> será fijado por los profesores especialistas que dicten la asignatura antes del inicio de las clases y deberá ser comunicado a la Comisión Curricular correspondiente.<br><br>
+								De no cumplir con el mínimo de asistencia establecido, se entenderá que el alumno ha reprobado la actividad curricular por inasistencia, consignando en el acta la sigla RPI, no incidiendo en los cálculos de promedios aritméticos finales y cifras institucionales.</ul></div>
+	  <div class="grid-item"><b>Artículo 48°:</b><br><ul>Para efectos de calcular el promedio total de notas de un alumno, se deberán considerar las notas finales de aprobación y de reprobación de cada asignatura cursada, salvo que se trate de asignaturas aprobadas en segunda o tercera oportunidad, en cuyo caso no se considerará para el promedio general la nota de reprobación de la asignatura reprobada en primera oportunidad o segunda oportunidad, según corresponda.</ul></div>
+	  <div class="grid-item"><b>Artículo 49°:</b><br><ul>El trabajo académico del alumno se traducirá en una nota final que el profesor entregara en un acta, junto con la cartola correspondiente, al Director del Departamento respectivo, dentro del plazo que se establezca en el calendario académico de cada año.<br><br>
+								Una vez revisadas las actas con las notas finales obtenidas por los alumnos, el Director del Departamento las hará llegar sin enmiendas a la Dirección General de Docencia para su información y registro en un plazo no mayor a 10 (diez) días contados a partir del término oficial del semestre académico.</ul></div>
+	  <div class="grid-item"><b>Artículo 50°:</b><br><ul>Los alumnos que hubieren reprobado una o más asignaturas deberán repetirlas en el semestre inmediatamente siguiente en que se ofrezca el curso. Los alumnos que no aprobaren las asignaturas pendientes en esta segunda oportunidad serán en causal de eliminación y deberán hacer abandono de la Carrera o programa.<br><br>
+								Sin embargo, los alumnos podrán solicitar durante el desarrollo de la carrera o programa, la oportunidad de gracia para cursar hasta dos asignaturas distintas por tercera oportunidad (1a y 2a tercera), siempre y cuando cumplan con los siguientes requisitos:<br><br>
+								<li style="margin-left: 32px; list-style-type: lower-alpha;">Si es alumno de primer año, deberá tener promedio de notas igual o superior a <font color="blue">4.0</font> o tener aprobado el 50% de las asignaturas cursadas.</li>
+								<li style="margin-left: 32px; list-style-type: lower-alpha;">Si es alumno de curso superior, deberá tener promedio de notas igual o superior a <font color="blue">4.0</font>.</li><br>
+								Las solicitudes de la 1a y 2a tercera oportunidad serán resueltas por la Dirección General de Docencia.<br><br>
+								No obstante lo indicado precedentemente, los alumnos podrán solicitar la oportunidad de gracia para cursar una nueva asignatura por tercera oportunidad (3a tercera), siempre que su promedio de notas sea igual o superior a <font color="blue">4.0</font> y tengan el 50% de las asignaturas de su plan de estudio aprobadas.<br><br>
+								Asimismo, los alumnos podrán solicitar la oportunidad de gracia para cursar una asignatura diversa de las anteriores por tercera oportunidad (4a tercera) siempre que su promedio de notas sea igual o superior a <font color="blue">4.0</font> y tengan el 75% de las asignaturas de su plan de estudio aprobadas.<br><br>
+								Las solicitudes de 3a y 4a tercera oportunidad serán resueltas por el Vicerrector Académico, previo informe de la Dirección General de Docencia.<br><br>
+								Sin perjuicio de lo indicado en los incisos anteriores, el Tribunal Académico podrá acoger, por una sola vez y previo informe del Jefe de Carrera, solicitudes de tercera oportunidad para casos calificados que no cumplan los requisitos de nota y avance curricular mínimos indicados precedentemente.<br><br>
+								El Tribunal Académico también podrá acoger solicitudes de cuarta oportunidad para casos calificados en una única asignatura, por una sola vez y previo informe del Jefe de Carrera, pudiendo determinar que el alumno curse nuevamente la asignatura o rinda un examen especial. En este caso, el alumno no podrá inscribir ninguna otra asignatura en el semestre que deba cursar la asignatura reprobada o rendir el examen especial.<br><br>
+								Las solicitudes de oportunidades de gracia a que se refiere este artículo, deberán presentarse ante la Dirección General de Docencia.</ul></div>
+	  <div class="grid-item"><b>Artículo 51°:</b><br><ul>El alumno que repita una asignatura que se refiera a ramo electivo, optativo o de franja; o que corresponda a  actividades artísticas, deportivas o valóricas, se considerará siempre como segunda o tercera oportunidad, según sea el caso, independientemente de su nombre, clave, contenido o del profesor que la imparta.</ul></div>
+	  <div class="grid-item"><b>Artículo 52°:</b><br><ul>El estudiante podrá cursar las asignaturas del nivel superior, paralelamente con las reprobadas, siempre que los requisitos lo permitan.</ul></div>
+	  <div class="grid-item"><b>Artículo 53°:</b><br><ul>Los alumnos de primer año podrán continuar sus estudios en la Universidad cuando cumplan con algunos de los siguientes requisitos al término de los dos primeros semestres cursados:<br><br>
+								<li style="margin-left: 32px; list-style-type: lower-alpha;">Aprobar al menos un 30% de las asignaturas de primer año.</li>
+								<li style="margin-left: 32px; list-style-type: lower-alpha;">Tener un promedio acumulado anual correspondiente al primer año de <font color="blue">4.0</font> o superior.</li><br>
+								De no cumplirse con lo anteriormente establecido, el alumno será eliminado académicamente de la carrera. Sin embargo, el alumno afectado podrá presentar una solicitud de reconsideración ante el Director General de Docencia, quien resolverá favorablemente sí se cumplen los siguientes requisitos:<br><br>
+								<li style="margin-left: 32px; list-style-type: circle;">Tener aprobado el 30% de las asignaturas cursadas durante el primer año.</li>
+								<li style="margin-left: 32px; list-style-type: circle;">Informe favorable del Jefe de Carrera.</li>
+								<li style="margin-left: 32px; list-style-type: circle;">Buenos antecedentes personales del alumno.</li><br>
+								Sin perjuicio de lo anterior, para el efecto de mantener las ayudas estudiantiles otorgadas por el Ministerio de Educación, el alumno deberá cumplir los requisitos y exigencias establecidas por la normativa aplicable.</ul></div>
+
+	<div class="referencias">Referencias (PDFs):<br>
+				- <a onclick="knowledgeProgress();" href="https://www.upla.cl/transparencia/wp-content/uploads/2013/05/2013_0514_dto_exto_0277-2005.pdf" target="_blank">Decreto Exento 277-2005.</a><br>
+				- <a onclick="knowledgeProgress();" href="https://www.upla.cl/transparencia/wp-content/uploads/2018/03/2018_0306_marconormativo_otrasnormas_ene-2018_dto_exto_1290-2017.pdf" target="_blank">Decreto Exento 1290-2017.</a><br>
+				- <a onclick="knowledgeProgress();" href="https://www.upla.cl/transparencia/wp-content/uploads/2023/04/20230410_normasorganicas_abril_dto_exto_174-2023.pdf" target="_blank">Decreto Exento 0174-2023.</a></div>
+	</div>
+    <br>
+    <br>
+    </div>
+<br>
+</div>
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="scripts/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+     $('textarea').each(function(){
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+    });
+}
+window.onload = function() {
+    $('textarea').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+knowledgeProgress();
+}
+</script>
+
+
+<!- USER STATS PROGRESS COUNTER ->
+<div>
+<textarea class="progressArea" id="knowledgeProgress" style="top: 10px">0</textarea>
+</div>
+<!- USER STATS PROGRESS COUNTER ->
+
+
+<script type="text/javascript">
+function knowledgeProgress() {
+// =========================
+// USER STATS CALCULATION
+// =========================
+
+// DECLARING VARIABLES!
+var knowledgeProgress = document.getElementById("knowledgeProgress").value
+var additionValue = 0.1
+var newProgress = parseFloat(knowledgeProgress) + parseFloat(additionValue);
+ if (knowledgeProgress < 100) { 
+    document.getElementById("knowledgeProgress").value = newProgress.toFixed(2);
+    // console.log("El nuevo progreso es de " + newProgress.toFixed(1));
+  }
+ if (knowledgeProgress >= 100) {document.getElementById("knowledgeProgress").value = 100}
+}
+</script>
+
+
+</body>
+</html>

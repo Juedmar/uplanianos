@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta http-equiv="refresh" content="300">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Temporizador</title>
+</head>
+
+<body>
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+
+<div class="main">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenu" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14" disabled="disabled">⏳ Temporizador</option>
+      <option value="141">&#x27A5; ⏳ Mostar tiempo!!!</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Temporizador-inator!</p></div>
+
+<script type="text/javascript">
+document.getElementById('titleMenu').addEventListener('change', function() {
+ if (titleMenu.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenu.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenu.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenu.value == 4) {blurMenu(); window.location = "calendario.html"}
+ if (titleMenu.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenu.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenu.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenu.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenu.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenu.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenu.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenu.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenu.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenu.value == 14) {blurMenu(); window.location = "temporizador.html"}
+   if (titleMenu.value == 141) {blurMenu(); window.location = "temporizador.html?show=true"}
+ if (titleMenu.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenu.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenu').value = 0; document.getElementById('titleMenu').blur();}
+</script> 
+
+
+<div class="grid-item" id="secondSemester" style="font-size: 14px; margin-top: 24px; margin-left: 2%; margin-right: 3%; padding: 12px; background-color: #A7C7E7; /* Pastel Blue */">
+<b>Cronómetro automático para las clases.</b>
+</div>
+
+	<div id="studyBar" class="grid-item-slider" style="background-color: #0000CC66; margin-top: 24px; margin-bottom: 24px">
+
+	  <br>
+	    <font id="checkpoint" class="checkpoint">📅 Tiempo para <span id="nextEvent">el siguiente evento</span>:</font>
+	  <br>
+
+	  <div id="countdown" class="countdown" style="margin-top: 12px; margin-left: -8px;">
+	    <div><p class="classCountdown" id="hoursStart" style="margin: 0px;">-</p></div>
+	    <div style="margin-left: -10%; margin-right: -5%;"><p class="classCountdown" style="margin: 0px;">:</p></div>
+	    <div><p class="classCountdown" id="minutesStart" style="margin: 0px;">-</p></div>
+	    <div style="margin-left: -10%; margin-right: -5%;"><p class="classCountdown" style="margin: 0px;">:</p></div>
+	    <div><p class="classCountdown" id="secondsStart" style="margin: 0px;">-</p></div>
+	  </div>
+
+	  <div id="clock" class="clock" style="margin-bottom: 12px; margin-left: -8px;">
+	    <div>Horas</div>
+	    <div style="margin-left: -10%; margin-right: -5%;"></div>
+	    <div>Minutos</div>
+	    <div style="margin-left: -10%; margin-right: -5%;"></div>
+	    <div>Segundos</div>
+	  </div>
+
+	  <div id="progressBar" style="width: 95%; padding-right: -6px; height: 30px; margin-left: auto; margin-right: auto; margin-top: 6px; margin-bottom: 24px;">
+	   <input id="theProgressBar" class="temporizador" type="range" value="0" />
+	  <div id="progressPercent" class="progressPercent" style="position: relative; width: 100%; padding-right: 5%; margin-top: -25px; text-align: center; color: #333; font-size: 10px;">-</div>
+	  </div>
+
+	  <div id="theWeekend" style="font-color: white; font-size: 21px; font-weight: bold; text-align: center">
+	    <br><p>No hay clases el fin de semana!</p><br><br>
+	  </div>
+
+	</div>
+
+	<!- End of "grid-item-tools" Div ->
+	</div>
+
+	<div id="qrCode" style="margin-top: 12px; text-align: center">
+	<p>Consigue esta herramienta:<br>
+	<img src="media/temporizador-qr.jpg" width="18%" onclick="window.open('media/temporizador-qr.jpg')">
+	</p>
+	</div>
+
+  <br>
+  </div>
+
+<br>
+</div>
+
+
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="scripts/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+     $('textarea').each(function(){
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+    });
+}
+
+window.onload = function() {
+    $('textarea').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+// CALLS TO FUNCTIONS ON LOADING
+knowledgeProgress()
+startTimer()
+noCode()
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+function startTimer() {
+// SETTING CURRENT HOUR
+const date = new Date();
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const thisMonth = date.getMonth() // ZERO is January
+var thisDate = date.getDate()
+// SETTING RIGHT NOW
+const thisHour = date.getHours()
+const theseMinutes = date.getMinutes()
+// FORMATTING HOUR AS DOUBLE DIGITS
+const doubleHour = thisHour.toString().padStart(2,0)
+const doubleMinutes = theseMinutes.toString().padStart(2,0)
+
+var show = (new URLSearchParams(window.location.search)).get("show")
+if (show == "true") {thisDay=1} // Monday!
+else {var thisDay = date.getDay()} // SIX is Saturday & ZERO is Sunday!
+
+// thisDay=1; // MONDAY (FOR TESTING)
+// console.log(thisDay)
+
+// SETTING UP CLASS PERIODS
+// THE FORMAT MUST BE IN FULL FOR THE COUNTDOWN!!!
+const period1 = "08:00:00"
+const period2 = "09:30:00"
+const period3 = "11:00:00"
+const period4 = "12:30:00"
+const period5 = "14:00:00"
+const period6 = "15:30:00"
+const period7 = "17:00:00"
+const period8 = "18:30:00"
+
+// SETTING UP BREAKS
+const break1 = "09:15:00"
+const break2 = "10:45:00"
+const break3 = "12:15:00"
+const break4 = "13:45:00"
+const break5 = "15:15:00"
+const break6 = "16:45:00"
+const break7 = "18:15:00"
+const break8 = "19:45:00"
+
+const midnight = "24:00:00"
+
+// SETTING CURRENT TIME
+var rightNow = doubleHour+"."+doubleMinutes; // console.log(rightNow)
+
+// SETTING UP CLASS TIME (DEFAULT VALUE)
+var classTime = "00:00:00"
+
+// SETTING HTML ELEMENTS
+const nextEvent = document.getElementById("nextEvent")
+
+// SETTING UP PERIODS
+if (rightNow < 08.00) {classTime = period1; nextEvent.innerHTML = "el 1° período (8:00)"}
+if (rightNow >= 08.00 && rightNow < 09.15) {classTime = break1; nextEvent.innerHTML = "el próximo receso (9:15)"}
+if (rightNow >= 09.15 && rightNow < 09.30) {classTime = period2; nextEvent.innerHTML = "el 2° período (9:30)"}
+if (rightNow >= 09.30 && rightNow < 10.45) {classTime = break2; nextEvent.innerHTML = "el próximo receso (10:45)"}
+if (rightNow >= 10.45 && rightNow < 11.00) {classTime = period3; nextEvent.innerHTML = "el 3° período (11:00)"}
+if (rightNow >= 11.00 && rightNow < 12.15) {classTime = break3; nextEvent.innerHTML = "el próximo receso (12:15)"}
+if (rightNow >= 12.15 && rightNow < 12.30) {classTime = period4; nextEvent.innerHTML = "el 4° período (12:30)"}
+if (rightNow >= 12.30 && rightNow < 13.45) {classTime = break4; nextEvent.innerHTML = "el próximo receso (13:45)"}
+if (rightNow >= 13.45 && rightNow < 14.00) {classTime = period5; nextEvent.innerHTML = "el 5° período (14:00)"}
+if (rightNow >= 14.00 && rightNow < 15.15) {classTime = break5; nextEvent.innerHTML = "el próximo receso (15:15)"}
+if (rightNow >= 15.15 && rightNow < 15.30) {classTime = period6; nextEvent.innerHTML = "6° período (15:30)"}
+if (rightNow >= 15.30 && rightNow < 16.45) {classTime = break6; nextEvent.innerHTML = "el próximo receso (16:45)"}
+if (rightNow >= 16.45 && rightNow < 17.00) {classTime = period7; nextEvent.innerHTML = "7° período (17:00)"}
+if (rightNow >= 17.00 && rightNow < 18.15) {classTime = break7; nextEvent.innerHTML = "el próximo receso (18:15)"}
+if (rightNow >= 18.15 && rightNow < 18.30) {classTime = period8; nextEvent.innerHTML = "el 8° período (18:30)"}
+if (rightNow >= 18.30 && rightNow < 19.45) {classTime = break8; nextEvent.innerHTML = "terminar las clases"}
+if (rightNow >= 19.45) {classTime = midnight; nextEvent.innerHTML = "estudiar y descansar"}
+
+// CALLING PROGRESS BAR FUNCTION & PASSING 'CLASS TIME' VALUE!!!
+progressBar(classTime,thisDay)
+
+// DATE FORMATTING AND TIME VARIABLES
+var dateFormat = monthNames[thisMonth] + " " + thisDate + ", 2024 "
+
+// UPDATE FINAL COUNTDOWN DATE
+var finalDate = new Date(dateFormat+classTime).getTime()
+
+// ORIGINAL COUNTDOWN DATE (COMMENTED OUT)
+// var originalCountdown = new Date("Aug 7, 2024 10:45:00").getTime()
+
+// FORMATTED COUNTDOWN DATE
+var countdownDate = new Date(finalDate).getTime()
+
+// CHECK IF IT'S THE WEEKEND
+if (thisDay == 6 || thisDay == 0) { // SATURDAY & SUNDAY
+document.getElementById("checkpoint").style.display = "none"
+document.getElementById("countdown").style.display = "none"
+document.getElementById("clock").style.display = "none"
+document.getElementById("progressBar").style.display = "none"
+document.getElementById("theWeekend").style.display = "inline"
+
+setTimeout('document.getElementById("titleMenu").focus()', 1000 * 1)
+setTimeout('document.getElementById("titleMenu").blur()', 1000 * 2)
+setTimeout('document.getElementById("titleMenu").focus()', 1000 * 3)
+
+}
+
+else {
+
+  // HIDDING WEEKEND TEXT
+  document.getElementById("theWeekend").style.display = "none"
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime()
+
+    // COUNTDOWN FUNCTIONALITY
+    // COUNTDOWN FUNCTIONALITY
+    // COUNTDOWN FUNCTIONALITY
+
+    // Find the distance between now an the count down date
+    var distance = countdownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+    // Output the result in an element with id="demo"
+    document.getElementById("hoursStart").innerHTML = hours
+    document.getElementById("minutesStart").innerHTML = minutes
+    document.getElementById("secondsStart").innerHTML = seconds
+
+    // ZERO HOUR && ZERO MINUTES FOR YELLOW SECONDS
+    if (hours == 0 && minutes == 0) {document.getElementById("secondsStart").style.color = "yellow"}
+    else {document.getElementById("secondsStart").style.color = "white"}
+
+    // EXPIRED COUNTDOWN
+    if (distance <= 0) {
+    // RED STYLE WHEN EXPIRED
+    classCountdown = document.querySelectorAll("p.classCountdown")
+    for(let numbers of classCountdown) {numbers.style.color = "red"}
+    // FIXING EXPIRED NEGATIVE NUMBERS
+      document.getElementById("hoursStart").innerHTML = -Math.abs(hours)+1
+      document.getElementById("minutesStart").innerHTML = -Math.abs(minutes)+1
+      // document.getElementById("secondsStart").innerHTML = -Math.abs(seconds)+1
+    // FUNCTIONALITY
+    // clearInterval(x);
+    setTimeout('refreshCountdown()', 1000 * 15); // 15 SECONDS OF RED NUMBERS, THEN REFRESH!
+    }
+  }, 1000) // END OF INTERVAL
+
+ } // END OF ELSE STATEMENT FROM WEEKEND CHECK!
+
+} // END OF FULL SCRIPT
+
+
+// END OF COUNTDOWN REFRESH FUNCTION
+function refreshCountdown() {window.location = "temporizador.html"}
+
+
+// PROGRESS BAR FUNCTION
+function progressBar(classTime,thisDay) {
+bar = document.getElementById('theProgressBar')
+
+var classEnd = classTime.slice(0, -3) // TIME IS SLICED TO 4 DIGITS FOR MILLISECOND CONVERSION
+
+var theStart = "00:00"
+var theEnd = "24:00"
+
+  if (classEnd == "08:00") {theStart = "00:00"; theEnd = "08:00"} // START OF DAY
+
+  if (classEnd == "09:15") {theStart = "08:00"; theEnd = "09:15"} // FIRST PERIOD
+  if (classEnd == "09:30") {theStart = "09:15"; theEnd = "09:30"} // FIRS BREAK
+
+  if (classEnd == "10:45") {theStart = "09:30"; theEnd = "10:45"} // SECOND PERIOD
+  if (classEnd == "11:00") {theStart = "10:45"; theEnd = "11:00"} // SECOND BREAK
+
+  if (classEnd == "12:15") {theStart = "11:00"; theEnd = "12:15"} // THIRD PERIOD
+  if (classEnd == "12:30") {theStart = "12:15"; theEnd = "12:30"} // THIRD BREAK
+
+  if (classEnd == "13:45") {theStart = "12:30"; theEnd = "13:45"} // FOURTH BREAK
+  if (classEnd == "14:00") {theStart = "13:45"; theEnd = "14:00"} // FOURTH PERIOD
+
+  if (classEnd == "15:15") {theStart = "14:00"; theEnd = "15:15"} // FIFTH PERIOD
+  if (classEnd == "15:30") {theStart = "15:15"; theEnd = "15:30"} // FIFTH BREAK
+
+  if (classEnd == "16:45") {theStart = "15:30"; theEnd = "16:45"} // SIXTH PERIOD
+  if (classEnd == "17:00") {theStart = "16:45"; theEnd = "17:00"} // SIXTH BREAK
+
+  if (classEnd == "18:15") {theStart = "17:00"; theEnd = "18:15"} // SEVENTH PERIOD
+  if (classEnd == "18:30") {theStart = "18:15"; theEnd = "18:30"} // SEVENTH BREAK
+
+  if (classEnd == "19:45") {theStart = "18:30"; theEnd = "19:45"} // EIGTH PERIOD
+  if (classEnd == "24:00") {theStart = "19:45"; theEnd = "24:00"} // END OF DAY
+
+// Update the count down every 1 second
+var clockTicking = setInterval(function() {
+  const now = new Date()
+  const hour = now.getHours()
+  const minutes = now.getMinutes()
+  // FORMATTING THE DOUBLE TIME
+  const doubleHour = hour.toString().padStart(2,0)
+  const doubleMinutes = minutes.toString().padStart(2,0)
+  let theTime = (doubleHour + ":" + doubleMinutes)
+
+  // TURNING TIMES INTO MILLISECONDS
+  let starting = Number(theStart.split(':')[0]) * 60 * 60 * 1000 + Number(theStart.split(':')[1]) * 60 * 1000
+  let current = Number(theTime.split(':')[0]) * 60 * 60 * 1000 + Number(theTime.split(':')[1]) * 60 * 1000
+  let ending = Number(theEnd.split(':')[0]) * 60 * 60 * 1000 + Number(theEnd.split(':')[1]) * 60 * 1000
+
+  // UPDATING PROGRESS MIN / MAX
+  bar.min = starting
+  bar.value = current
+  bar.max = ending
+
+  var value = (current-starting)/(ending-starting)*100
+  let valuePercent = parseFloat(value).toFixed(2)
+  document.getElementById("progressPercent").innerHTML = valuePercent+"%"
+    if (valuePercent < 85) { bar.style.background = 'linear-gradient(to right, lightgreen 0%, #50C878 ' + valuePercent + '%, #fff ' + valuePercent + '%, white 100%)' }
+    if (valuePercent >= 85) { bar.style.background = 'linear-gradient(to right, pink 0%, #FF0000cc ' + valuePercent + '%, #fff ' + valuePercent + '%, white 100%)' }
+
+  if (thisDay >= 1 && thisDay <= 5) { // SATURDAY & SUNDAY
+    let titlePercent = Math.floor(value).toFixed(0)
+    document.title = (100-titlePercent) + "% restante - Uplanianos"
+  }
+
+  }, 1000 * 1)
+  // END OF CLOCK TICKING INTERVAL
+
+} // END OF PROGRESS BAR FUNCTION
+</script>
+
+
+
+<script type="text/javascript">
+function noCode() {
+var qrCode = document.getElementById("qrCode")
+  // CHECKING MOBILE
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) { qrCode.style.display = "none" }
+  else { qrCode.style.display = "inline" }
+}
+</script>
+
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+
+
+
+<!- USER STATS PROGRESS COUNTER ->
+<div>
+<textarea class="progressArea" id="knowledgeProgress" style="top: 10px">0</textarea>
+</div>
+<!- USER STATS PROGRESS COUNTER ->
+
+
+<script type="text/javascript">
+function knowledgeProgress() {
+// =========================
+// USER STATS CALCULATION
+// =========================
+
+// DECLARING VARIABLES!
+var knowledgeProgress = document.getElementById("knowledgeProgress").value
+var additionValue = 0.5
+var newProgress = parseFloat(knowledgeProgress) + parseFloat(additionValue);
+ if (knowledgeProgress < 100) { 
+    document.getElementById("knowledgeProgress").value = newProgress.toFixed(2);
+    // console.log("El nuevo progreso es de " + newProgress.toFixed(1));
+  }
+ if (knowledgeProgress >= 100) {document.getElementById("knowledgeProgress").value = 100}
+}
+</script>
+
+
+</body>
+</html>

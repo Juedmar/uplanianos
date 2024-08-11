@@ -4,12 +4,21 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- The following are Search Engine Meta Tags -->
+	<meta name="description" content="La app Uplanianos permite a los estudiantes optimizar sus actividades académicas como el horario, avance curricular, calendario académico o reglamento del estudiante, además de utilizar herramientas de cálculo de notas de pruebas, promedios generales, porcentaje de asistencia y examen acumulativo especial."/>
+	<meta name="keywords" content="Uplanianos, Upla, Universidad, Playa, Ancha, Universidad de Playa Ancha, Valparaíso"/>
+	<meta name="author" content="Prof. Juan Edo. Méndez" />
+	<meta name="robots" content="follow"/>
+	<!-- End of Search Engine Meta Tags -->
+
 	<link rel="icon" href="media/uplanianos-icon.png">
 	<link rel="stylesheet" href="files/uplanianos-style.css">
 	<title>Uplanianos Web</title>
 </head>
 
-<body>
+<body onLoad="doNeedButtons()">
+
 
 <div class="main">
     <br>
@@ -17,33 +26,102 @@
         <h1 class="uplanianos-h1-glow"><font color="red">U</font> <font color="green">P</font> <font color="blue">L</font> <font color="purple">A</font> <font color="yellow">N</font> <font color="turquoise">I</font> <font color="lightgreen">A</font> <font color="orange">N</font> <font color="lightblue">O</font> <font color="pink">S</font></h1>
     </div>
     <div class="labels"><p>Información:</p></div>
-    <div class="info-div">
-    <a href="pages/notas.html"><div class="info-bubble"><p>ESCALAS<br>DE NOTAS</p></div></a>
-    <a href="pages/calendario.html"><div class="info-bubble"><p>CALENDARIO<br>ACADÉMICO</p></div></a>
-    <a href="pages/manual-estudiante.html"><div class="info-bubble"><p>MANUAL DEL<br>ESTUDIANTE</p></div></a>
-    <a href="https://play.google.com/store/apps/details?id=juedmar.upla.nianos"><div class="info-bubble-off" title="Solo disponible en Android App!"><p class="font-bubble-off">HORARIO<br>DE CLASES</p></div></a>
-    <a href="https://play.google.com/store/apps/details?id=juedmar.upla.nianos"><div class="info-bubble-off"title="Solo disponible en Android App!"><p class="font-bubble-off">AVANCE<br>CURRICULAR</p></div></a>
+    <div class="info-div" id="infoDiv" style="overflow-x: scroll; scroll-behavior: smooth;">
+     <button onclick="sideScrollInfo()" onMouseOver="sideScrollInfo()" class="slideInfoLeft" id="slideInfoLeft">&#8249;</button>
+     <a href="horario.html"><div class="pretty-blue-bubble"><p>HORARIO<br>DE CLASES</p></div></a>
+     <a href="temporizador.html"><div class="candy-red-bubble" style="width: 150px;"><p>TEMPORIZADOR<br>DE CLASES</p></div></a>
+     <a href="agenda.html"><div class="grass-green-bubble" style="width: 150px;"><p>AGENDA<br>SEMESTRAL</p></div></a>
+     <a href="calendario.html"><div class="pale-blue-bubble"><p>CALENDARIO<br>ACADÉMICO</p></div></a>
+     <a href="avance.html"><div class="purple-iris-bubble"><p>AVANCE<br>CURRICULAR</p></div></a>
+     <a href="manual-estudiante.html"><div class="pink-plum-bubble"><p>MANUAL DEL<br>ESTUDIANTE</p></div></a>
+     <a href="notas.html"><div class="pumpkin-bubble"><p>ESCALAS<br>DE NOTAS</p></div></a>
+     <button onclick="sideScrollInfo()" onMouseOver="sideScrollInfo()" class="slideInfoRight" id="slideInfoRight">&#8250;</button>
     </div>
+
     <div class="labels"><p>Herramientas:</p></div>
-    <div class="tools-div">
-    <a href="pages/integrales.html"><div class="tools-bubble"><p>PROMEDIAR<br>INTEGRALES</p></div></a>
-    <a href="pages/promedios.html"><div class="tools-bubble"><p>PROMEDIO EN<br>PORCENTAJES</p></div></a>
-    <a href="pages/pruebas.html"><div class="tools-bubble"><p>PORCENTAJE<br>DE PRUEBAS</p></div></a>
-    <a href="pages/asistencia.html"><div class="tools-bubble"><p>PORCENTAJE<br>DE ASISTENCIA</p></div></a>
-    <a href="pages/examen.html"><div <div class="tools-bubble"><p>SIMULACIÓN<br>DE EXAMEN</p></div></a>
-    <a href="https://play.google.com/store/apps/details?id=juedmar.upla.nianos"><div class="tools-bubble-off"><p class="font-bubble-off">VOTACIÓN<br>UPLANIANA</p></div></a>
+    <div class="tools-div" id="toolsDiv" style="overflow-x: scroll; scroll-behavior: smooth;">
+     <button onclick="sideScrollTools()" onMouseOver="sideScrollTools()" class="slideToolsLeft" id="slideToolsLeft">&#8249;</button>
+     <a href="integrales.html?x=2&g1=0.0&g2=0.0"><div class="pumpkin-bubble"><p>PROMEDIAR<br>INTEGRALES</p></div></a>
+     <a href="promedios.html"><div class="pale-neon-yellow-bubble"><p style="color: #616D7E; font-color: #616D7E;">PROMEDIO EN<br>PORCENTAJES</p></div></a>
+     <a href="pruebas.html?total=100&puntos=0"><div class="purple-iris-bubble"><p>PORCENTAJE<br>DE PRUEBAS</p></div></a>
+     <a href="asistencia.html?tipo=2&clases=12&asiste=0"><div class="small-grass-bubble"><p>PORCENTAJE<br>DE ASISTENCIA</p></div></a>
+     <a href="examen.html?promedio=3.5&examen=4.0"><div class="pink-plum-bubble"><p>SIMULACIÓN<br>DE EXAMEN</p></div></a>
+     <a href="timebox.html"><div class="pumpkin-bubble"><p>PLANIFICADOR<br>DE ESTUDIO</p></div></a>
+     <a href="countdown.html"><div class="candy-red-bubble" style="width: 142px;"><p>CUENTA<br>REGRESIVA</p></div></a>
+     <a href="justify.html"><div class="pale-blue-bubble"><p>JUSTIFICAR<br>INASISTENCIA</p></div></a>
+     <a href="upladisticas.html"><div class="small-grass-bubble"><p>UPLANIANOS<br>STATS</p></div></a>
+     <a href="https://play.google.com/store/apps/details?id=juedmar.upla.nianos"><div class="tools-bubble-off" title="Solo disponible en Android App!"><p class="font-bubble-off"><small>📱</small> VOTACIÓN<br>UPLANIANA</p></div></a>
+    <button onclick="sideScrollTools()" onMouseOver="sideScrollTools()" class="slideToolsRight" id="slideToolsRight">&#8250;</button>
     </div>
     <br>
-    <a href="pages/license.html"><div class="footer">Web App no oficial para Uplanianos!</div></a>
+    <a href="license.html"><div class="footer">🔎 Web App no oficial para Uplanianos! ✔️<br><small>(<u>Términos de Uso</u>)</small></div></a>
     <br>
+    <br>
+    </div>
+
     <div class="counter">
-     <a href='http://www.freevisitorcounters.com'>www.freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=38a6d5789117af0afbba085a736f0fe5465d0da8'></script>
-     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1032905/t/5"></script>
+     <a href='http://www.freevisitorcounters.com'>www.freevisitorcounters.com</a>
+	<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=38a6d5789117af0afbba085a736f0fe5465d0da8'></script>
+	<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1032905/t/5"></script>
     </div>
-    <br>
-    <br>
-    </div>
+
 </div>
+
+<script type="text/javascript">
+function sideScrollInfo() {
+const slideInfoRight = document.getElementById('slideInfoRight');
+const slideInfoLeft = document.getElementById('slideInfoLeft');
+const infoArea = document.getElementById('infoDiv');
+    slideInfoRight.onclick = function() { infoArea.scrollLeft += 500};
+    slideInfoLeft.onclick = function() { infoArea.scrollLeft -= 500};
+}
+</script>
+
+
+<script type="text/javascript">
+function sideScrollTools() {
+const slideToolsRight = document.getElementById('slideToolsRight');
+const slideToolsLeft = document.getElementById('slideToolsLeft');
+const toolsArea = document.getElementById('toolsDiv');
+    slideToolsRight.onclick = function() { toolsArea.scrollLeft += 500};
+    slideToolsLeft.onclick = function() { toolsArea.scrollLeft -= 500};
+}
+</script>
+
+
+<script type="text/javascript">
+function doNeedButtons() {
+// DECLARING ELEMENTS
+slideInfoRight = document.getElementById('slideInfoRight');
+slideInfoLeft = document.getElementById('slideInfoLeft');
+slideToolsRight = document.getElementById('slideToolsRight');
+slideToolsLeft = document.getElementById('slideToolsLeft');
+// CHECKING MOBILE
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    slideInfoRight.style.visibility = "hidden"; slideInfoRight.style.display = "none";
+    slideInfoLeft.style.visibility = "hidden"; slideInfoLeft.style.display = "none";
+    slideToolsRight.style.visibility = "hidden"; slideToolsRight.style.display = "none";
+    slideToolsLeft.style.visibility = "hidden"; slideToolsLeft.style.display = "none";
+   }
+  else {
+    setTimeout('demoSlide1()', 1000 * 0.4);
+    setTimeout('demoSlide2()', 1000 * 1);
+    setTimeout('demoSlide3()', 1000 * 2.5);
+   }
+}
+
+function demoSlide1() {
+document.getElementById('slideToolsRight').focus(); 
+document.getElementById('toolsDiv').scrollLeft += 500;}
+
+function demoSlide2() {
+document.getElementById('slideToolsLeft').focus();
+document.getElementById('toolsDiv').scrollLeft -= 500;}
+
+function demoSlide3() {
+document.getElementById('slideToolsLeft').blur();}
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Examen Especial</title>
+</head>
+
+<body>
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+<div class="main">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenu" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Simulación Examen.</p></div>
+
+<script type="text/javascript">
+document.getElementById('titleMenu').addEventListener('change', function() {
+ if (titleMenu.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenu.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenu.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenu.value == 4) {blurMenu(); window.location = "calendario.html"}
+ if (titleMenu.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenu.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenu.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenu.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenu.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenu.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenu.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenu.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenu.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenu.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenu.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenu.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenu').value = 0; document.getElementById('titleMenu').blur();}
+function exitSoon(){window.location = "index.html"}
+</script> 
+
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-item-tools"><br><text class="class-type" id="exam-title">Promedio Semestral (70%):<br><br>
+	  <div class="triple-container">
+	    <div class="triple-left"><input type="number" class="average" id="averageGrade" min="1" max="5" step="0.1" value="3.5" readonly disabled></div>
+	    <div class="triple-center" style="margin-top: 12px; font-weight: normal;">x 70% ➡️</div>
+	    <div class="triple-right"><input type="number" class="calculation" id="seventy" min="2.45" max="2.73" step="0.01" value="2.45" readonly disabled></div>
+	  </div>
+	  <br>
+	  <input type="range" class="slidebar" min="3.5" max="3.9" step="0.1" value="3.5" id="averageSlidebar" oninput="updateAverage(); getResult();"><br><br></div>
+	</div>
+
+	<br>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-item-tools"><br><text class="class-type" id="exam-title">Examen Especial (30%):<br><br>
+	  <div class="triple-container">
+	    <div class="triple-left"><input type="number" class="exam" id="examGrade" min="4.0" max="7.0" step="0.1" value="4.0" readonly disabled></div>
+	    <div class="triple-center" style="margin-top: 12px; font-weight: normal;">x 30% ➡️</div>
+	    <div class="triple-right"><input type="number" class="calculation" id="thirty" min="1.2" max="2.1" step="0.01" value="1.2" readonly disabled></div>
+	  </div>
+	  <br>
+	  <input type="range" class="slidebar" min="4.0" max="7.0" step="0.1" value="4" id="examSlidebar" oninput="updateExam(); getResult();"><br><br></div>
+	</div>
+
+	<br>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow;">
+	  <div class="grid-exam-results"><br><text class="class-type" id="exam-title">Resultado final:<br>
+	  <hr style="width: 98%; margin: auto; margin-top: 6px; margin-bottom: 6px; margin-right: 12px;">
+
+	  <div class="triple-container">
+	    <div class="triple-center" style="margin-top: 10px; font-weight: normal;">Sumatoria:</div>
+	    <div class="triple-right"><input type="number" class="calculation" id="oneHundred" min="1.2" max="2.1" step="0.01" value="3.65" readonly disabled></div>
+	  </div>
+
+	  <div class="triple-container">
+	    <div class="triple-center" style="margin-top: 10px; font-weight: normal;"><b>Promedio:</b></div>
+	    <div class="triple-right"><input type="number" class="average" id="finalAverage" min="3.7" max="4.8" step="0.1" value="3.7" readonly disabled></div>
+	  </div>
+
+    <br>
+
+    </div>
+<br>
+</div>
+
+
+
+<script type="text/javascript">
+function getLinkValue() {
+
+// DECLARING LINK ELEMENTS
+var promedio = (new URLSearchParams(window.location.search)).get("promedio");
+var examen = (new URLSearchParams(window.location.search)).get("examen");
+
+// DECLARING AVERAGE ELEMENTS
+var averageGrade = document.getElementById('averageGrade');
+var averageSlidebar = document.getElementById('averageSlidebar');
+
+// DECLARING EXAM ELEMENTS
+var examGrade = document.getElementById('examGrade');
+var examSlidebar = document.getElementById('examSlidebar');
+
+// CONVERTING LINK VALUE
+var linkAverage = parseFloat(promedio).toFixed(1);
+var linkExam = parseFloat(examen).toFixed(1);
+
+// CHECKING AVERAGE
+if (linkAverage >= 3.5 && linkAverage <= 3.9) { averageSlidebar.value = linkAverage; averageGrade.value = linkAverage; updateAverage() }
+else { averageGrade.value = "3.5"; averageSlidebar.value = "3.5"; updateAverage() };
+if (linkAverage >= 1.0 && linkAverage <= 3.4) { alert("El promedio debe ser mayor a 3.4!"); window.location.replace('examen.html') };
+if (linkAverage >= 4.0) { alert("El promedio debe ser manor a 4.0!"); window.location.replace('examen.html') };
+
+// CHECKING EXAM
+if (linkExam >= 4.0 && linkExam <= 7.0) { examSlidebar.value = linkExam; examGrade.value = linkExam; updateExam() }
+else { examGrade.value = "4.0"; examSlidebar.value = "4.0"; updateExam() };
+if (linkExam >= 1.0 && linkExam < 4.0) { alert("El examen debe ser mayor a 4.0!"); window.location.replace('examen.html') };
+if (linkExam > 7.0) { alert("El examen debe ser menor a 7.0!"); window.location.replace('examen.html') };
+
+getResult();
+
+}
+
+// /================================================\
+// | Format: /examen.html?promedio=3.7&promedio=4.6 |
+// \================================================/
+
+</script>
+
+
+
+<script type="text/javascript">
+function updateAverage() {
+	var averageNumber = document.getElementById('averageSlidebar').value;
+	document.getElementById('averageGrade').value = parseFloat(averageNumber);
+
+	var seventy = document.getElementById('seventy');
+	document.getElementById("seventy").value = (averageNumber * 0.7).toFixed(2);
+}
+
+function updateExam() {
+	var examNumber = document.getElementById('examSlidebar').value;
+	document.getElementById('examGrade').value = parseFloat(examNumber).toFixed(1);
+
+	var thirty = document.getElementById('thirty');
+	document.getElementById("thirty").value = (examNumber * 0.3).toFixed(2);
+}
+
+function getResult() {
+	var seventy = document.getElementById('seventy').value;
+	var thirty = document.getElementById('thirty').value;
+
+	var oneHundred = document.getElementById('oneHundred');
+	document.getElementById("oneHundred").value = (parseFloat(seventy) + parseFloat(thirty)).toFixed(2);
+
+	var finalAverage = document.getElementById('finalAverage');
+	var finalCalculation = document.getElementById("oneHundred").value;
+	document.getElementById("finalAverage").value = (Math.round(finalCalculation*10)/10).toFixed(1);
+
+	var finalResult = document.getElementById('finalAverage').value;
+	if (finalResult < 3.95) { document.getElementById("finalAverage").style.background = "darkred"; document.getElementById("finalAverage").style.transition = "background-color 0.6s"}
+	if (finalResult >= 3.95) { document.getElementById("finalAverage").style.background = "cornflowerblue";  document.getElementById("finalAverage").style.transition = "background-color 0.6s";}
+
+	// UPDATE STATS:
+	knowledgeProgress();
+
+}
+</script>
+
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="scripts/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onbeforeunload = function() {
+     $('textarea').each(function(){
+        var id = $(this).attr('id');
+        var value = $(this).val();
+       localStorage.setItem(id, value);
+    });
+}
+
+window.onload = function() {
+    $('textarea').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+knowledgeProgress();
+getLinkValue();
+}
+</script>
+
+
+
+<!- USER STATS PROGRESS COUNTER ->
+<div>
+<textarea class="progressArea" id="knowledgeProgress" style="top: 10px">0</textarea>
+</div>
+<!- USER STATS PROGRESS COUNTER ->
+
+
+<script type="text/javascript">
+function knowledgeProgress() {
+// =========================
+// USER STATS CALCULATION
+// =========================
+
+// DECLARING VARIABLES!
+var knowledgeProgress = document.getElementById("knowledgeProgress").value
+var additionValue = 1 * 0.02
+var newProgress = parseFloat(knowledgeProgress) + parseFloat(additionValue);
+ if (knowledgeProgress < 100) { setTimeout(() => {
+    document.getElementById("knowledgeProgress").value = newProgress.toFixed(2);
+    // console.log("El nuevo progreso es de " + newProgress.toFixed(1));
+    }, 1000);}
+ if (knowledgeProgress >= 100) {document.getElementById("knowledgeProgress").value = 100}
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Estadísticas Uplanianas</title>
+</head>
+
+<body>
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+<div class="main">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenu" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Progreso Uplaniano.</p>
+  </div>
+
+<script type="text/javascript">
+document.getElementById('titleMenu').addEventListener('change', function() {
+ if (titleMenu.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenu.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenu.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenu.value == 4) {blurMenu(); window.location = "calendario-seg-sem-2024.html"}
+ if (titleMenu.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenu.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenu.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenu.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenu.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenu.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenu.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenu.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenu.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenu.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenu.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenu.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenu').value = 0; document.getElementById('titleMenu').blur();}
+</script>
+
+
+<div class="grid-item" style="background-color: #DBF9DB; margin-left: 3%; margin-right: 3%;">
+<font size="2px">Aumenta tus estadísticas Uplanianas mediante el uso de las herramientas de la aplicación.</font>
+</div>
+
+<br>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow; margin-bottom: 12px;">
+	  <div class="grid-item-slider" style="padding-right: 3%; padding-top: 12px; padding-bottom: 12px;">
+	    <text class="class-type" id="class-type"><b><font style="font-size:18px; border: 1px solid white; border-radius: 6px; padding-left: 3px; padding-right: 4px; margin-right: 2px; background-color: #0096FF;">U</font>tilización de tiempo/prioridades:</b></text>
+	    <br>
+	    <div id="studyBarDiv" style="width: 100%; background-color: grey; border: 1px solid darkgray; border-radius: 3px; margin-top: 12px;">
+	    <div id="studyBar" style="width: 0%; height: 30px; background-color: green; border-radius: 3px; padding-top: 6px; text-align: center;">&nbsp;0%
+	    </div></div>
+	    <center><font color="darkgray" size="1px" style="border-left: 12%;">Planificación de <a href="agenda.html">prioridades</a> y <a href="timebox.html">hábitos</a> de estudios.</font></center>
+	  </div>
+	</div>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow; margin-bottom: 12px;">
+	  <div class="grid-item-slider" style="padding-right: 3%; padding-top: 12px; padding-bottom: 12px;">
+	    <text class="class-type" id="class-type"><b><font style="font-size:18px; border: 1px solid white; border-radius: 6px; padding-left: 3px; padding-right: 4px; margin-right: 2px; background-color: #0096FF;">P</font>reparación y organización:</b></text>
+	    <br>
+	    <div id="scheduleBarDiv" style="width: 100%; background-color: grey; border: 1px solid darkgray; border-radius: 3px; margin-top: 12px;">
+	    <div id="scheduleBar" style="width: 0%; height: 30px; background-color: green; border-radius: 3px; padding-top: 6px; text-align: center;">&nbsp;0%
+	    </div></div>
+	    <center><font color="darkgray" size="1px" style="border-left: 12%;">Completación del <a href="horario.html">horario de clases</a>.</font></center>
+	  </div>
+	</div>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow; margin-bottom: 12px;">
+	  <div class="grid-item-slider" style="padding-right: 3%; padding-top: 12px; padding-bottom: 12px;">
+	    <text class="class-type" id="class-type"><b><font style="font-size:18px; border: 1px solid white; border-radius: 6px; padding-left: 3px; padding-right: 4px; margin-right: 2px; background-color: #0096FF;">L</font>ineamientos y conocimiento:</b></text>
+	    <br>
+	    <div id="knowledgeBarDiv" style="width: 100%; background-color: grey; border: 1px solid darkgray; border-radius: 3px; margin-top: 12px;">
+	    <div id="knowledgeBar" style="width: 0%; height: 30px; background-color: green; border-radius: 3px; padding-top: 6px; text-align: center;">&nbsp;0%
+	    </div></div>
+	    <center><font color="darkgray" size="1px" style="border-left: 12%;">Conocimiento de las <a href="calendario.html">fechas</a>, <a href="asistencia.html">porcentajes</a> y <a href="manual-estudiante.html">normativas</a>.</font></center>
+	  </div>
+	</div>
+
+	<div class="grid-container-pages" style="grid-auto-flow: flow; margin-bottom: 12px;">
+	  <div class="grid-item-slider" style="padding-right: 3%; padding-top: 12px; padding-bottom: 12px;">
+	    <text class="class-type" id="class-type"><b><font style="font-size:18px; border: 1px solid white; border-radius: 6px; padding-left: 3px; padding-right: 4px; margin-right: 2px; background-color: #0096FF;">A</font>utonomía y autogestión:</b></text>
+	    <br>
+	    <div id="autonomyBarDiv" style="width: 100%; background-color: grey; border: 1px solid darkgray; border-radius: 3px; margin-top: 12px;">
+	    <div id="autonomyBar" style="width: 0%; height: 30px; background-color: green; border-radius: 3px; padding-top: 6px; text-align: center;">&nbsp;0%
+	    </div></div>
+	    <center><font color="darkgray" size="1px" style="border-left: 12%;">Uso de <a href="integrales.html">cálculos</a> y <a href="pruebas.html">procentajes</a>.</font></center>
+	  </div>
+	</div>
+
+
+    <br>
+    </div>
+
+<br>
+</div>
+
+
+<!- SAVE FUNCTION ->
+<!- CONNECTED TO JQUERY WITH THE FOLLOWING SCRIPT ->
+<script src="scripts/jquery-3.7.1.slim.js"></script>
+<!- https://stackoverflow.com/questions/39155511/html-save-text-in-textarea ->
+<!- https://jquery.com/download/ ->
+
+<script type="text/javascript">
+window.onload = function() {
+    $('textarea').each(function(){
+       var id = $(this).attr('id');
+       var text2 = localStorage.getItem(id);
+       if (text2 !== null) $('#'+id).val(text2);
+    });
+studyPercent();
+schedulePercent();
+knowledgePercent();
+autonomyPercent();
+}
+</script>
+
+
+<!- USER STATS PROGRESS COUNTER ->
+<div><textarea class="progressArea" id="studyProgress" style="left: 10px;">0</textarea></div>
+<div><textarea class="progressArea" id="scheduleProgress" style="left: 60px;">0</textarea></div>
+<div><textarea class="progressArea" id="knowledgeProgress" style="left: 110px;">0</textarea></div>
+<div><textarea class="progressArea" id="autonomyProgress" style="left: 160px;">0</textarea></div>
+<!- USER STATS PROGRESS COUNTER ->
+
+
+<script type="text/javascript">
+function studyPercent() {
+var duration = 2000; // it should finish in 5 seconds !
+var percent = duration / 100; // 1 percent of duration
+var i = 0; // Animation starts from Zero!
+var studyProgress = document.getElementById("studyProgress").value;
+var studyBar = document.getElementById("studyBar");
+  if (studyProgress == 0) {$("#studyBar").css("width", "0%");}
+  if (studyProgress > 0) {
+    var doTheLoop = setInterval(function(){
+        i++;
+        $("#studyBar").css("width", i + "%");
+        $("#studyBar").text(i + "%");
+        if (i >= studyProgress) { clearInterval(doTheLoop); }
+        if (i >= 100) { clearInterval(doTheLoop); }
+        if (i >= 0 && i < 25) { studyBar.style.backgroundColor = "#FF3131"; studyBar.style.transition = "background-color 0.2s";}
+        if (i >= 25 && i < 50) { studyBar.style.backgroundColor = "#CC99C9"; studyBar.style.transition = "background-color 0.6s";}
+        if (i >= 50 && i < 85) { studyBar.style.backgroundColor = "#0096FF"; studyBar.style.transition = "background-color 0.6s";}
+        if (i >= 85 && i <= 100) { studyBar.style.backgroundColor = "#00A36C"; studyBar.style.transition = "background-color 0.6s";}
+    }, percent);
+  }
+}
+</script>
+
+
+<script type="text/javascript">
+function schedulePercent() {
+var duration = 2000; // it should finish in 5 seconds !
+var percent = duration / 100; // 1 percent of duration
+var i = 0; // Animation starts from Zero!
+var scheduleProgress = document.getElementById("scheduleProgress").value;
+var scheduleBar = document.getElementById("scheduleBar");
+  if (scheduleProgress == 0) {$("#scheduleBar").css("width", "0%");}
+  if (scheduleProgress > 0) {
+    var doTheLoop = setInterval(function(){
+        i++;
+        $("#scheduleBar").css("width", i + "%");
+        $("#scheduleBar").text(i + "%");
+        if (i >= scheduleProgress) { clearInterval(doTheLoop); }
+        if (i >= 100) { clearInterval(doTheLoop); }
+        if (i >= 0 && i < 25) { scheduleBar.style.backgroundColor = "#FF3131"; scheduleBar.style.transition = "background-color 0.2s";}
+        if (i >= 25 && i < 50) { scheduleBar.style.backgroundColor = "#CC99C9"; scheduleBar.style.transition = "background-color 0.6s";}
+        if (i >= 50 && i < 85) { scheduleBar.style.backgroundColor = "#0096FF"; scheduleBar.style.transition = "background-color 0.6s";}
+        if (i >= 85 && i <= 100) { scheduleBar.style.backgroundColor = "#00A36C"; scheduleBar.style.transition = "background-color 0.6s";}
+    }, percent);
+  }
+}
+</script>
+
+
+<script type="text/javascript">
+function knowledgePercent() {
+var duration = 2000; // it should finish in 5 seconds !
+var percent = duration / 100; // 1 percent of duration
+var i = 0; // Animation starts from Zero!
+var knowledgeProgress = document.getElementById("knowledgeProgress").value;
+var knowledgeBar = document.getElementById("knowledgeBar");
+  if (knowledgeProgress == 0) {$("#knowledgeBar").css("width", "0%");}
+  if (knowledgeProgress > 0) {
+    var doTheLoop = setInterval(function(){
+        i++;
+        $("#knowledgeBar").css("width", i + "%");
+        $("#knowledgeBar").text(i + "%");
+        if (i >= knowledgeProgress) { clearInterval(doTheLoop); }
+        if (i >= 100) { clearInterval(doTheLoop); }
+        if (i >= 0 && i < 25) { knowledgeBar.style.backgroundColor = "#FF3131"; knowledgeBar.style.transition = "background-color 0.2s";}
+        if (i >= 25 && i < 50) { knowledgeBar.style.backgroundColor = "#FFAA33"; knowledgeBar.style.transition = "background-color 0.6s";}
+        if (i >= 50 && i < 85) { knowledgeBar.style.backgroundColor = "#0096FF"; knowledgeBar.style.transition = "background-color 0.6s";}
+        if (i >= 85 && i <= 100) { knowledgeBar.style.backgroundColor = "#00A36C"; knowledgeBar.style.transition = "background-color 0.6s";}
+    }, percent);
+  }
+}
+</script>
+
+
+<script type="text/javascript">
+function autonomyPercent() {
+var duration = 2000; // it should finish in 5 seconds !
+var percent = duration / 100; // 1 percent of duration
+var i = 0; // Animation starts from Zero!
+var autonomyProgress = document.getElementById("autonomyProgress").value;
+var autonomyBar = document.getElementById("autonomyBar");
+  if (autonomyProgress == 0) {$("#autonomyBar").css("width", "0%");}
+  if (autonomyProgress > 0) {
+    var doTheLoop = setInterval(function(){
+        i++;
+        $("#autonomyBar").css("width", i + "%");
+        $("#autonomyBar").text(i + "%");
+        if (i >= autonomyProgress) { clearInterval(doTheLoop); }
+        if (i >= 100) { clearInterval(doTheLoop); }
+        if (i >= 0 && i < 25) { autonomyBar.style.backgroundColor = "#FF3131"; autonomyBar.style.transition = "background-color 0.2s";}
+        if (i >= 25 && i < 50) { autonomyBar.style.backgroundColor = "#FFAA33"; autonomyBar.style.transition = "background-color 0.6s";}
+        if (i >= 50 && i < 85) { autonomyBar.style.backgroundColor = "#0096FF"; autonomyBar.style.transition = "background-color 0.6s";}
+        if (i >= 85 && i <= 100) { autonomyBar.style.backgroundColor = "#00A36C"; autonomyBar.style.transition = "background-color 0.6s";}
+    }, percent);
+  }
+}
+</script>
+
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+</body>
+</html>

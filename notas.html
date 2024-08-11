@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="en-US">
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="media/uplanianos-icon.png">
+	<link rel="stylesheet" href="files/pages-style.css">
+	<title>Uplanianos - Escala de Notas</title>
+	<style>@media print {.grid-notas {display: inline;}}</style>
+</head>
+
+<body onload="getLinkValues()">
+<a href="index.html"><div id="return" class="return">&larrhk;</div></a>
+
+
+<div class="main">
+
+    <div id="seventy" style="display: inline;">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenuOne" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Escala del <a href="notas.html?escala=60" style="text-decoration: none;">
+    60%</a> | <a href="notas.html?escala=70" style="text-decoration: none;"><big><b>70%</big></b></a></p></div>
+	<div class="grid-container-seventy" style="grid-auto-flow: column;">
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">1</div>
+	  <div class="grid-notas">2</div>
+	  <div class="grid-notas">3</div>
+	  <div class="grid-notas">4</div>
+	  <div class="grid-notas">5</div>
+	  <div class="grid-notas">6</div>
+	  <div class="grid-notas">7</div>
+	  <div class="grid-notas">8</div>
+	  <div class="grid-notas">9</div>
+	  <div class="grid-notas">10</div>
+	  <div class="grid-notas">11</div>
+	  <div class="grid-notas">12</div>
+	  <div class="grid-notas">13</div>
+	  <div class="grid-notas">14</div>
+	  <div class="grid-notas">15</div>
+	  <div class="grid-notas">16</div>
+	  <div class="grid-notas">17</div>
+	  <div class="grid-notas">18</div>
+	  <div class="grid-notas">19</div>
+	  <div class="grid-notas">20</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">1.0</font></div>
+	  <div class="grid-notas"><font color="red">1.1</font></div>
+	  <div class="grid-notas"><font color="red">1.1</font></div>
+	  <div class="grid-notas"><font color="red">1.2</font></div>
+	  <div class="grid-notas"><font color="red">1.2</font></div>
+	  <div class="grid-notas"><font color="red">1.3</font></div>
+	  <div class="grid-notas"><font color="red">1.3</font></div>
+	  <div class="grid-notas"><font color="red">1.3</font></div>
+	  <div class="grid-notas"><font color="red">1.4</font></div>
+	  <div class="grid-notas"><font color="red">1.4</font></div>
+	  <div class="grid-notas"><font color="red">1.5</font></div>
+	  <div class="grid-notas"><font color="red">1.5</font></div>
+	  <div class="grid-notas"><font color="red">1.6</font></div>
+	  <div class="grid-notas"><font color="red">1.6</font></div>
+	  <div class="grid-notas"><font color="red">1.6</font></div>
+	  <div class="grid-notas"><font color="red">1.7</font></div>
+	  <div class="grid-notas"><font color="red">1.7</font></div>
+	  <div class="grid-notas"><font color="red">1.8</font></div>
+	  <div class="grid-notas"><font color="red">1.8</font></div>
+	  <div class="grid-notas"><font color="red">1.9</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">21</div>
+	  <div class="grid-notas">22</div>
+	  <div class="grid-notas">23</div>
+	  <div class="grid-notas">24</div>
+	  <div class="grid-notas">25</div>
+	  <div class="grid-notas">26</div>
+	  <div class="grid-notas">27</div>
+	  <div class="grid-notas">28</div>
+	  <div class="grid-notas">29</div>
+	  <div class="grid-notas">30</div>
+	  <div class="grid-notas">31</div>
+	  <div class="grid-notas">32</div>
+	  <div class="grid-notas">33</div>
+	  <div class="grid-notas">34</div>
+	  <div class="grid-notas">35</div>
+	  <div class="grid-notas">36</div>
+	  <div class="grid-notas">37</div>
+	  <div class="grid-notas">38</div>
+	  <div class="grid-notas">39</div>
+	  <div class="grid-notas">40</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">1.9</font></div>
+	  <div class="grid-notas"><font color="red">1.9</font></div>
+	  <div class="grid-notas"><font color="red">2.0</font></div>
+	  <div class="grid-notas"><font color="red">2.0</font></div>
+	  <div class="grid-notas"><font color="red">2.1</font></div>
+	  <div class="grid-notas"><font color="red">2.1</font></div>
+	  <div class="grid-notas"><font color="red">2.2</font></div>
+	  <div class="grid-notas"><font color="red">2.2</font></div>
+	  <div class="grid-notas"><font color="red">2.2</font></div>
+	  <div class="grid-notas"><font color="red">2.3</font></div>
+	  <div class="grid-notas"><font color="red">2.3</font></div>
+	  <div class="grid-notas"><font color="red">2.4</font></div>
+	  <div class="grid-notas"><font color="red">2.4</font></div>
+	  <div class="grid-notas"><font color="red">2.5</font></div>
+	  <div class="grid-notas"><font color="red">2.5</font></div>
+	  <div class="grid-notas"><font color="red">2.5</font></div>
+	  <div class="grid-notas"><font color="red">2.6</font></div>
+	  <div class="grid-notas"><font color="red">2.6</font></div>
+	  <div class="grid-notas"><font color="red">2.7</font></div>
+	  <div class="grid-notas"><font color="red">2.7</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">41</div>
+	  <div class="grid-notas">42</div>
+	  <div class="grid-notas">43</div>
+	  <div class="grid-notas">44</div>
+	  <div class="grid-notas">45</div>
+	  <div class="grid-notas">46</div>
+	  <div class="grid-notas">47</div>
+	  <div class="grid-notas">48</div>
+	  <div class="grid-notas">49</div>
+	  <div class="grid-notas">50</div>
+	  <div class="grid-notas">51</div>
+	  <div class="grid-notas">52</div>
+	  <div class="grid-notas">53</div>
+	  <div class="grid-notas">54</div>
+	  <div class="grid-notas">55</div>
+	  <div class="grid-notas">56</div>
+	  <div class="grid-notas">57</div>
+	  <div class="grid-notas">58</div>
+	  <div class="grid-notas">59</div>
+	  <div class="grid-notas">60</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">2.8</font></div>
+	  <div class="grid-notas"><font color="red">2.8</font></div>
+	  <div class="grid-notas"><font color="red">2.8</font></div>
+	  <div class="grid-notas"><font color="red">2.9</font></div>
+	  <div class="grid-notas"><font color="red">2.9</font></div>
+	  <div class="grid-notas"><font color="red">3.0</font></div>
+	  <div class="grid-notas"><font color="red">3.0</font></div>
+	  <div class="grid-notas"><font color="red">3.1</font></div>
+	  <div class="grid-notas"><font color="red">3.1</font></div>
+	  <div class="grid-notas"><font color="red">3.1</font></div>
+	  <div class="grid-notas"><font color="red">3.2</font></div>
+	  <div class="grid-notas"><font color="red">3.2</font></div>
+	  <div class="grid-notas"><font color="red">3.3</font></div>
+	  <div class="grid-notas"><font color="red">3.3</font></div>
+	  <div class="grid-notas"><font color="red">3.4</font></div>
+	  <div class="grid-notas"><font color="red">3.4</font></div>
+	  <div class="grid-notas"><font color="red">3.4</font></div>
+	  <div class="grid-notas"><font color="red">3.5</font></div>
+	  <div class="grid-notas"><font color="red">3.5</font></div>
+	  <div class="grid-notas"><font color="red">3.6</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">61</div>
+	  <div class="grid-notas">62</div>
+	  <div class="grid-notas">63</div>
+	  <div class="grid-notas">64</div>
+	  <div class="grid-notas">65</div>
+	  <div class="grid-notas">66</div>
+	  <div class="grid-notas">67</div>
+	  <div class="grid-notas">68</div>
+	  <div class="grid-notas">69</div>
+	  <div class="grid-notas">70</div>
+	  <div class="grid-notas">71</div>
+	  <div class="grid-notas">72</div>
+	  <div class="grid-notas">73</div>
+	  <div class="grid-notas">74</div>
+	  <div class="grid-notas">75</div>
+	  <div class="grid-notas">76</div>
+	  <div class="grid-notas">77</div>
+	  <div class="grid-notas">78</div>
+	  <div class="grid-notas">79</div>
+	  <div class="grid-notas">80</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">3.6</font></div>
+	  <div class="grid-notas"><font color="red">3.7</font></div>
+	  <div class="grid-notas"><font color="red">3.7</font></div>
+	  <div class="grid-notas"><font color="red">3.7</font></div>
+	  <div class="grid-notas"><font color="red">3.8</font></div>
+	  <div class="grid-notas"><font color="red">3.8</font></div>
+	  <div class="grid-notas"><font color="red">3.9</font></div>
+	  <div class="grid-notas"><font color="red">3.9</font></div>
+	  <div class="grid-notas-pink"><font color="blue">4.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.0</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">81</div>
+	  <div class="grid-notas">82</div>
+	  <div class="grid-notas">83</div>
+	  <div class="grid-notas">84</div>
+	  <div class="grid-notas">85</div>
+	  <div class="grid-notas">86</div>
+	  <div class="grid-notas">87</div>
+	  <div class="grid-notas">88</div>
+	  <div class="grid-notas">89</div>
+	  <div class="grid-notas">90</div>
+	  <div class="grid-notas">91</div>
+	  <div class="grid-notas">92</div>
+	  <div class="grid-notas">93</div>
+	  <div class="grid-notas">94</div>
+	  <div class="grid-notas">95</div>
+	  <div class="grid-notas">96</div>
+	  <div class="grid-notas">97</div>
+	  <div class="grid-notas">98</div>
+	  <div class="grid-notas">99</div>
+	  <div class="grid-notas">100</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas-green"><font color="blue">5.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">7.0</font></div>
+	</div>
+    </div>
+
+    <div id="sixty" style="display: none;">
+    <div class="labels"><p>
+      <select class="titleMenu" id="titleMenuTwo" name="titleMenu" >
+      <option value="0" selected disabled="disabled">☰</option>
+      <option value="1">📖 Agenda</option>
+      <option value="2">✔️ Asistencia</option>
+      <option value="3">📁 Avance Curricular</option>
+      <option value="4">🗓️ Calendario II, 2024</option>
+      <option value="5">⏲️ Cuenta Regresiva</option>
+      <option value="6">📈 Escala de Notas</option>
+      <option value="7">📚 Horario de Clases</option>
+      <option value="8">💊 Justificador</option>
+      <option value="9">📜 Manual Estudiante</option>
+      <option value="10">✍️ Nota de Pruebas</option>
+      <option value="11">💯 Promedio Integral</option>
+      <option value="12">💯 Promedio Porcentual</option>
+      <option value="13">📋 Simulador Examen</option>
+      <option value="14">⏳ Temporizador</option>
+      <option value="15">📝 Timebox (Upla)</option>
+      <option value="16">📊 Upladísticas</option>
+    </select>
+    <b>Uplanianos App:</b> Escala del <a href="notas.html?escala=60" style="text-decoration: none;">
+    <big><b>60%</b></big></a> | <a href="notas.html?escala=70" style="text-decoration: none;">70%</a></p></div>
+	<div class="grid-container-sixty" style="grid-auto-flow: column;">
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">1</div>
+	  <div class="grid-notas">2</div>
+	  <div class="grid-notas">3</div>
+	  <div class="grid-notas">4</div>
+	  <div class="grid-notas">5</div>
+	  <div class="grid-notas">6</div>
+	  <div class="grid-notas">7</div>
+	  <div class="grid-notas">8</div>
+	  <div class="grid-notas">9</div>
+	  <div class="grid-notas">10</div>
+	  <div class="grid-notas">11</div>
+	  <div class="grid-notas">12</div>
+	  <div class="grid-notas">13</div>
+	  <div class="grid-notas">14</div>
+	  <div class="grid-notas">15</div>
+	  <div class="grid-notas">16</div>
+	  <div class="grid-notas">17</div>
+	  <div class="grid-notas">18</div>
+	  <div class="grid-notas">19</div>
+	  <div class="grid-notas">20</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">1.1</font></div>
+	  <div class="grid-notas"><font color="red">1.1</font></div>
+	  <div class="grid-notas"><font color="red">1.2</font></div>
+	  <div class="grid-notas"><font color="red">1.2</font></div>
+	  <div class="grid-notas"><font color="red">1.3</font></div>
+	  <div class="grid-notas"><font color="red">1.3</font></div>
+	  <div class="grid-notas"><font color="red">1.4</font></div>
+	  <div class="grid-notas"><font color="red">1.4</font></div>
+	  <div class="grid-notas"><font color="red">1.5</font></div>
+	  <div class="grid-notas"><font color="red">1.5</font></div>
+	  <div class="grid-notas"><font color="red">1.6</font></div>
+	  <div class="grid-notas"><font color="red">1.6</font></div>
+	  <div class="grid-notas"><font color="red">1.7</font></div>
+	  <div class="grid-notas"><font color="red">1.7</font></div>
+	  <div class="grid-notas"><font color="red">1.8</font></div>
+	  <div class="grid-notas"><font color="red">1.8</font></div>
+	  <div class="grid-notas"><font color="red">1.9</font></div>
+	  <div class="grid-notas"><font color="red">1.9</font></div>
+	  <div class="grid-notas"><font color="red">2.0</font></div>
+	  <div class="grid-notas"><font color="red">2.0</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">21</div>
+	  <div class="grid-notas">22</div>
+	  <div class="grid-notas">23</div>
+	  <div class="grid-notas">24</div>
+	  <div class="grid-notas">25</div>
+	  <div class="grid-notas">26</div>
+	  <div class="grid-notas">27</div>
+	  <div class="grid-notas">28</div>
+	  <div class="grid-notas">29</div>
+	  <div class="grid-notas">30</div>
+	  <div class="grid-notas">31</div>
+	  <div class="grid-notas">32</div>
+	  <div class="grid-notas">33</div>
+	  <div class="grid-notas">34</div>
+	  <div class="grid-notas">35</div>
+	  <div class="grid-notas">36</div>
+	  <div class="grid-notas">37</div>
+	  <div class="grid-notas">38</div>
+	  <div class="grid-notas">39</div>
+	  <div class="grid-notas">40</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">2.1</font></div>
+	  <div class="grid-notas"><font color="red">2.1</font></div>
+	  <div class="grid-notas"><font color="red">2.2</font></div>
+	  <div class="grid-notas"><font color="red">2.2</font></div>
+	  <div class="grid-notas"><font color="red">2.3</font></div>
+	  <div class="grid-notas"><font color="red">2.3</font></div>
+	  <div class="grid-notas"><font color="red">2.4</font></div>
+	  <div class="grid-notas"><font color="red">2.4</font></div>
+	  <div class="grid-notas"><font color="red">2.5</font></div>
+	  <div class="grid-notas"><font color="red">2.5</font></div>
+	  <div class="grid-notas"><font color="red">2.6</font></div>
+	  <div class="grid-notas"><font color="red">2.6</font></div>
+	  <div class="grid-notas"><font color="red">2.7</font></div>
+	  <div class="grid-notas"><font color="red">2.7</font></div>
+	  <div class="grid-notas"><font color="red">2.8</font></div>
+	  <div class="grid-notas"><font color="red">2.8</font></div>
+	  <div class="grid-notas"><font color="red">2.9</font></div>
+	  <div class="grid-notas"><font color="red">2.9</font></div>
+	  <div class="grid-notas"><font color="red">3.0</font></div>
+	  <div class="grid-notas"><font color="red">3.0</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">41</div>
+	  <div class="grid-notas">42</div>
+	  <div class="grid-notas">43</div>
+	  <div class="grid-notas">44</div>
+	  <div class="grid-notas">45</div>
+	  <div class="grid-notas">46</div>
+	  <div class="grid-notas">47</div>
+	  <div class="grid-notas">48</div>
+	  <div class="grid-notas">49</div>
+	  <div class="grid-notas">50</div>
+	  <div class="grid-notas">51</div>
+	  <div class="grid-notas">52</div>
+	  <div class="grid-notas">53</div>
+	  <div class="grid-notas">54</div>
+	  <div class="grid-notas">55</div>
+	  <div class="grid-notas">56</div>
+	  <div class="grid-notas">57</div>
+	  <div class="grid-notas">58</div>
+	  <div class="grid-notas">59</div>
+	  <div class="grid-notas">60</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas"><font color="red">3.1</font></div>
+	  <div class="grid-notas"><font color="red">3.1</font></div>
+	  <div class="grid-notas"><font color="red">3.2</font></div>
+	  <div class="grid-notas"><font color="red">3.2</font></div>
+	  <div class="grid-notas"><font color="red">3.3</font></div>
+	  <div class="grid-notas"><font color="red">3.3</font></div>
+	  <div class="grid-notas"><font color="red">3.4</font></div>
+	  <div class="grid-notas"><font color="red">3.4</font></div>
+	  <div class="grid-notas"><font color="red">3.5</font></div>
+	  <div class="grid-notas"><font color="red">3.5</font></div>
+	  <div class="grid-notas"><font color="red">3.6</font></div>
+	  <div class="grid-notas"><font color="red">3.6</font></div>
+	  <div class="grid-notas"><font color="red">3.7</font></div>
+	  <div class="grid-notas"><font color="red">3.7</font></div>
+	  <div class="grid-notas"><font color="red">3.8</font></div>
+	  <div class="grid-notas"><font color="red">3.8</font></div>
+	  <div class="grid-notas"><font color="red">3.9</font></div>
+	  <div class="grid-notas"><font color="red">3.9</font></div>
+	  <div class="grid-notas-pink"><font color="blue">4.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.0</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">61</div>
+	  <div class="grid-notas">62</div>
+	  <div class="grid-notas">63</div>
+	  <div class="grid-notas">64</div>
+	  <div class="grid-notas">65</div>
+	  <div class="grid-notas">66</div>
+	  <div class="grid-notas">67</div>
+	  <div class="grid-notas">68</div>
+	  <div class="grid-notas">69</div>
+	  <div class="grid-notas">70</div>
+	  <div class="grid-notas">71</div>
+	  <div class="grid-notas">72</div>
+	  <div class="grid-notas">73</div>
+	  <div class="grid-notas">74</div>
+	  <div class="grid-notas">75</div>
+	  <div class="grid-notas">76</div>
+	  <div class="grid-notas">77</div>
+	  <div class="grid-notas">78</div>
+	  <div class="grid-notas">79</div>
+	  <div class="grid-notas">80</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas-green"><font color="blue">4.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">4.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.5</font></div>
+	  <div class="grid-notas-blue">%</div>
+	  <div class="grid-notas">81</div>
+	  <div class="grid-notas">82</div>
+	  <div class="grid-notas">83</div>
+	  <div class="grid-notas">84</div>
+	  <div class="grid-notas">85</div>
+	  <div class="grid-notas">86</div>
+	  <div class="grid-notas">87</div>
+	  <div class="grid-notas">88</div>
+	  <div class="grid-notas">89</div>
+	  <div class="grid-notas">90</div>
+	  <div class="grid-notas">91</div>
+	  <div class="grid-notas">92</div>
+	  <div class="grid-notas">93</div>
+	  <div class="grid-notas">94</div>
+	  <div class="grid-notas">95</div>
+	  <div class="grid-notas">96</div>
+	  <div class="grid-notas">97</div>
+	  <div class="grid-notas">98</div>
+	  <div class="grid-notas">99</div>
+	  <div class="grid-notas">100</div>
+	  <div class="grid-notas-blue">Nota</div>
+	  <div class="grid-notas-green"><font color="blue">5.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">5.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.0</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.1</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.2</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.3</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.4</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.5</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.6</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.7</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.8</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">6.9</font></div>
+	  <div class="grid-notas-green"><font color="blue">7.0</font></div>
+	</div>
+    </div>
+    <br>
+    <br>
+    </div>
+<br>
+</div>
+
+
+<script type="text/javascript">
+document.getElementById('titleMenuOne').addEventListener('change', function() {
+ if (titleMenuOne.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenuOne.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenuOne.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenuOne.value == 4) {blurMenu(); window.location = "calendario.html"}
+ if (titleMenuOne.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenuOne.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenuOne.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenuOne.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenuOne.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenuOne.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenuOne.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenuOne.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenuOne.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenuOne.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenuOne.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenuOne.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenuOne').value = 0; document.getElementById('titleMenuOne').blur();}
+</script>
+
+
+<script type="text/javascript">
+document.getElementById('titleMenuTwo').addEventListener('change', function() {
+ if (titleMenuTwo.value == 1) {blurMenu(); window.location = "agenda.html"}
+ if (titleMenuTwo.value == 2) {blurMenu(); window.location = "asistencia.html?tipo=2&clases=12&asiste=0"}
+ if (titleMenuTwo.value == 3) {blurMenu(); window.location = "avance.html"}
+ if (titleMenuTwo.value == 4) {blurMenu(); window.location = "calendario-seg-sem-2024.html"}
+ if (titleMenuTwo.value == 5) {blurMenu(); window.location = "countdown.html"}
+ if (titleMenuTwo.value == 6) {blurMenu(); window.location = "notas.html?escala=70"}
+ if (titleMenuTwo.value == 7) {blurMenu(); window.location = "horario.html"}
+ if (titleMenuTwo.value == 8) {blurMenu(); window.location = "justify.html"}
+ if (titleMenuTwo.value == 9) {blurMenu(); window.location = "manual-estudiante.html"}
+ if (titleMenuTwo.value == 10) {blurMenu(); window.location = "pruebas.html?total=100&puntos=0"}
+ if (titleMenuTwo.value == 11) {blurMenu(); window.location = "integrales.html?x=2&g1=0.0&g2=0.0"}
+ if (titleMenuTwo.value == 12) {blurMenu(); window.location = "promedios.html"}
+ if (titleMenuTwo.value == 13) {blurMenu(); window.location = "examen.html?promedio=3.5&examen=4.0"}
+ if (titleMenuTwo.value == 14) {blurMenu(); window.location = "temporizador.html"}
+ if (titleMenuTwo.value == 15) {blurMenu(); window.location = "timebox.html"}
+ if (titleMenuTwo.value == 16) {blurMenu(); window.location = "upladisticas.html"}
+});
+
+function blurMenu(){document.getElementById('titleMenuTwo').value = 0; document.getElementById('titleMenuTwo').blur();}
+</script>
+
+
+<script type="text/javascript">
+function getLinkValues() {
+
+// GETTING VALUE FROM LINK & UPDATING AMOUNT OF SCALES
+var sixty= document.getElementById('sixty');
+var seventy = document.getElementById('seventy');
+var linkScale = (new URLSearchParams(window.location.search)).get("escala");
+if (linkScale>= 60) {sixty.style.display = "block"; seventy.style.display = "none"}
+if (linkScale>= 70) {sixty.style.display = "none"; seventy.style.display = "block"}
+}
+
+// /============================================\
+// | Format: /integrales.html?x=3&g1=5.0&g2=6.0 |
+// \============================================/
+
+</script>
+
+
+
+<script type="text/javascript">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("return").style.top = "6px"; 
+  } else {
+    document.getElementById("return").style.top = "-40px"; 
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+</body>
+</html>

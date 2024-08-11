@@ -17,7 +17,7 @@ a:hover		{ color: blue; text-decoration: underline; }
 a:active	{ color: red; }
 a:visited	{ color: hotpink; }
 
-.counter { position: absolute; right: 6px; bottom: 3px; color: white; font-size: 12px; opacity: 0.1; pointer-events: none; }
+.counter { position: absolute; left: 6px; bottom: 12px; color: white; font-size: 6px; opacity: 0.2; pointer-events: none; }
 
 * { box-sizing: border-box; }
 
@@ -71,7 +71,7 @@ a:visited	{ color: hotpink; }
 
 .labels { margin-left: 20px; margin-right: 20px; padding: 0px; padding-top: 12px; width: auto; }
 
-.info-div { font-size: 16px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 6px; overflow-x: scroll; white-space: nowrap; }
+.info-div { font-size: 16px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 6px; overflow-x: scroll; white-space: nowrap; cursor: e-resize; }
 
 .info-div::-webkit-scrollbar { display: none; }
 
@@ -87,6 +87,42 @@ a:visited	{ color: hotpink; }
   text-align: center;
 }
 
+.pretty-blue-bubble {
+  display: inline-block;
+  width: 160px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
+  background-color: #4470EE;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.grass-green-bubble {
+  display: inline-block;
+  width: 160px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
+  background-color: #3F9B0B;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.candy-red-bubble {
+  display: inline-block;
+  width: 160px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 6px;
+  background-color: #D2042D;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
 .info-bubble-off {
   display: inline-block;
   width: 150px;
@@ -94,17 +130,89 @@ a:visited	{ color: hotpink; }
   margin-right: 4px;
   padding: 6px;
   background-color: #666;
-  border: 1px solid white;
+  border: 1px solid lightgray;
   border-radius: 12px;
   text-align: center;
-  cursor: not-allowed;
+  cursor: alias;
 }
 
 .font-bubble-off { color: darkgray; }
 
-.tools-div { font-size: 14px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 6px; overflow-x: scroll; white-space: nowrap; }
+.tools-div { font-size: 14px; margin-left: 0px; margin-right: 0px; text-align: center; padding: 6px; overflow-x: scroll; white-space: nowrap; cursor: e-resize; }
 
 .tools-div::-webkit-scrollbar { display: none; }
+
+.pumpkin-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #F87217;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.pale-neon-yellow-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #FFFF55;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.purple-iris-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #571B7E;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.small-grass-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #3F9B0B;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.pink-plum-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #B93B8F;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.pale-blue-bubble {
+  display: inline-block;
+  width: 140px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 4px;
+  background-color: #5E81D1;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-align: center;
+}
 
 .tools-bubble {
   display: inline-block;
@@ -125,10 +233,34 @@ a:visited	{ color: hotpink; }
   margin-right: 3px;
   padding: 4px;
   background-color: #666;
-  border: 1px solid white;
+  border: 1px solid lightgray;
   border-radius: 12px;
   text-align: center;
-  cursor: not-allowed;
+  cursor: alias;
 }
 
+.slideInfoLeft {position: sticky; bottom: 14px; left: 0px; height: 54px; font-size: 26px; color: lightgray; background-color: #FFFFFF33; padding: 6px; border: 1px solid #FFFFFF88; border-radius: 12px;}
+.slideInfoRight {position: sticky; bottom: 14px; right: 0px; height: 54px; font-size: 26px; color: lightgray; background-color: #FFFFFF33; padding: 6px; border: 1px solid #FFFFFF88; border-radius: 12px;}
+.slideInfoLeft:active, .slideInfoRight:active {background-color: #FF0000CC; color: white;}
+.slideInfoLeft:hover, .slideInfoRight:hover {background-color: #FF000088;}
+.slideInfoLeft:focus, .slideInfoRight:focus {background-color: #FF000088;}
+
+.slideToolsLeft {position: sticky; bottom: 15px; left: 0px; height: 45px; font-size: 26px; color: lightgray; background-color: #FFFFFF33; padding: 6px; border: 1px solid #FFFFFF88; border-radius: 12px;}
+.slideToolsRight {position: sticky; bottom: 15px; right: 0px; height: 45px; font-size: 26px; color: lightgray; background-color: #FFFFFF33; padding: 6px; border: 1px solid #FFFFFF88; border-radius: 12px;}
+.slideToolsLeft:active, .slideToolsRight:active {background-color: #FF0000CC; color: white;}
+.slideToolsLeft:hover, .slideToolsRight:hover {background-color: #FF000088;}
+.slideToolsLeft:focus, .slideToolsRight:focus {background-color: #FF000088;}
+
 .footer { color: white; font-size: 12px; margin-left: 20px; margin-right: 20px; padding: 0px; padding-top: 12px; text-align: center; }
+
+
+/* PROGRESS SETTINGS */
+.counterArea {
+ position: absolute;
+ bottom: 12px; left: 10px;
+ height: 18px; width: 40px; 
+ text-align: center; font-size: 10px; font-family: Verdana, Tahoma; color: #444;
+ background-color: transparent; border: 1px dashed #444;
+ resize: none; overflow: hidden;
+ pointer-events: none;
+}
